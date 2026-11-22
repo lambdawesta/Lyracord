@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="Unicord.Universal.Pages.Overlay.UserInfoOverlayPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Unicord.Universal.Pages.Overlay"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:dialogs="using:Unicord.Universal.Dialogs"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Dark">
+                    <SolidColorBrush x:Key="ProfilePageBackdrop" Color="#FF000000"/>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Light">
+                    <SolidColorBrush x:Key="ProfilePageBackdrop" Color="#FFFFFFFF"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ProfilePageBackdrop}">
+        <dialogs:ProfileOverlay x:Name="userInfoOverlay" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Visible"/>
+    </Grid>
+</Page>

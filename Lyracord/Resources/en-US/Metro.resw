@@ -1,0 +1,955 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PluralRules" xml:space="preserve">
+    <value>english</value>
+  </data>
+  <data name="HubTitle.Text" xml:space="preserve">
+    <value>start</value>
+  </data>
+  <data name="HubSections.Text" xml:space="preserve">
+    <value>SECTIONS</value>
+  </data>
+  <data name="HubCallLabel.Text" xml:space="preserve">
+    <value>in a call</value>
+  </data>
+  <data name="HubCallName.Text" xml:space="preserve">
+    <value>voice channel</value>
+  </data>
+  <data name="HubStartSmall.Text" xml:space="preserve">
+    <value>channels and messages</value>
+  </data>
+  <data name="HubStartBig.Text" xml:space="preserve">
+    <value>start</value>
+  </data>
+  <data name="HubPeopleSmall.Text" xml:space="preserve">
+    <value>people</value>
+  </data>
+  <data name="HubFriendsBig.Text" xml:space="preserve">
+    <value>friends</value>
+  </data>
+  <data name="HubVersionSmall.Text" xml:space="preserve">
+    <value>version</value>
+  </data>
+  <data name="HubAboutBig.Text" xml:space="preserve">
+    <value>about</value>
+  </data>
+  <data name="HubSoonSmall.Text" xml:space="preserve">
+    <value>join our telegram community</value>
+  </data>
+  <data name="HubSupportBig.Text" xml:space="preserve">
+    <value>support</value>
+  </data>
+  <data name="HubRecent.Text" xml:space="preserve">
+    <value>RECENT</value>
+  </data>
+  <data name="HubEditProfile.Content" xml:space="preserve">
+    <value>edit profile</value>
+  </data>
+  <data name="HubTileColor.Content" xml:space="preserve">
+    <value>tile color</value>
+  </data>
+  <data name="HubSettings.Content" xml:space="preserve">
+    <value>settings</value>
+  </data>
+  <data name="Hub_Version" xml:space="preserve">
+    <value>version {0}</value>
+  </data>
+  <data name="Hub_Online" xml:space="preserve">
+    <value>{0} online</value>
+  </data>
+  <data name="Hub_People" xml:space="preserve">
+    <value>people</value>
+  </data>
+  <data name="Hub_ChannelsAndMessages" xml:space="preserve">
+    <value>channels and messages</value>
+  </data>
+  <data name="Hub_InCall" xml:space="preserve">
+    <value>in a call · {0} · {1}</value>
+  </data>
+  <data name="Hub_ColorsMulti" xml:space="preserve">
+    <value>multicolor</value>
+  </data>
+  <data name="Hub_ColorsAccent" xml:space="preserve">
+    <value>system accent color</value>
+  </data>
+  <data name="Hub_SupportTitle" xml:space="preserve">
+    <value>Support the project</value>
+  </data>
+  <data name="Hub_SupportText" xml:space="preserve">
+    <value>A way to support Lyracord will appear here soon. Thank you for using it!</value>
+  </data>
+  <data name="Unread_One" xml:space="preserve">
+    <value>{0} unread</value>
+  </data>
+  <data name="Unread_Few" xml:space="preserve">
+    <value>{0} unread</value>
+  </data>
+  <data name="Unread_Many" xml:space="preserve">
+    <value>{0} unread</value>
+  </data>
+  <data name="People_One" xml:space="preserve">
+    <value>{0} person</value>
+  </data>
+  <data name="People_Few" xml:space="preserve">
+    <value>{0} people</value>
+  </data>
+  <data name="People_Many" xml:space="preserve">
+    <value>{0} people</value>
+  </data>
+  <data name="Members_One" xml:space="preserve">
+    <value>{0} member</value>
+  </data>
+  <data name="Members_Few" xml:space="preserve">
+    <value>{0} members</value>
+  </data>
+  <data name="Members_Many" xml:space="preserve">
+    <value>{0} members</value>
+  </data>
+  <data name="NewMessages_One" xml:space="preserve">
+    <value>{0} new message</value>
+  </data>
+  <data name="NewMessages_Few" xml:space="preserve">
+    <value>{0} new messages</value>
+  </data>
+  <data name="NewMessages_Many" xml:space="preserve">
+    <value>{0} new messages</value>
+  </data>
+  <data name="Color_lime" xml:space="preserve">
+    <value>lime</value>
+  </data>
+  <data name="Color_green" xml:space="preserve">
+    <value>green</value>
+  </data>
+  <data name="Color_emerald" xml:space="preserve">
+    <value>emerald</value>
+  </data>
+  <data name="Color_teal" xml:space="preserve">
+    <value>teal</value>
+  </data>
+  <data name="Color_cyan" xml:space="preserve">
+    <value>cyan</value>
+  </data>
+  <data name="Color_cobalt" xml:space="preserve">
+    <value>cobalt</value>
+  </data>
+  <data name="Color_indigo" xml:space="preserve">
+    <value>indigo</value>
+  </data>
+  <data name="Color_violet" xml:space="preserve">
+    <value>violet</value>
+  </data>
+  <data name="Color_pink" xml:space="preserve">
+    <value>pink</value>
+  </data>
+  <data name="Color_magenta" xml:space="preserve">
+    <value>magenta</value>
+  </data>
+  <data name="Color_crimson" xml:space="preserve">
+    <value>crimson</value>
+  </data>
+  <data name="Color_red" xml:space="preserve">
+    <value>red</value>
+  </data>
+  <data name="Color_orange" xml:space="preserve">
+    <value>orange</value>
+  </data>
+  <data name="Color_amber" xml:space="preserve">
+    <value>amber</value>
+  </data>
+  <data name="Color_yellow" xml:space="preserve">
+    <value>yellow</value>
+  </data>
+  <data name="Color_brown" xml:space="preserve">
+    <value>brown</value>
+  </data>
+  <data name="Color_olive" xml:space="preserve">
+    <value>olive</value>
+  </data>
+  <data name="Color_steel" xml:space="preserve">
+    <value>steel</value>
+  </data>
+  <data name="Color_mauve" xml:space="preserve">
+    <value>mauve</value>
+  </data>
+  <data name="Color_taupe" xml:space="preserve">
+    <value>taupe</value>
+  </data>
+  <data name="ServersTabServers.Header" xml:space="preserve">
+    <value>servers</value>
+  </data>
+  <data name="ServersTabDirect.Header" xml:space="preserve">
+    <value>messages</value>
+  </data>
+  <data name="ServersTabFriends.Header" xml:space="preserve">
+    <value>friends</value>
+  </data>
+  <data name="Servers_Group" xml:space="preserve">
+    <value>group · {0}</value>
+  </data>
+  <data name="Servers_NobodyOnline" xml:space="preserve">
+    <value>nobody is online</value>
+  </data>
+  <data name="Presence_Offline" xml:space="preserve">
+    <value>offline</value>
+  </data>
+  <data name="Presence_Online" xml:space="preserve">
+    <value>online</value>
+  </data>
+  <data name="Presence_Idle" xml:space="preserve">
+    <value>idle</value>
+  </data>
+  <data name="Presence_DoNotDisturb" xml:space="preserve">
+    <value>do not disturb</value>
+  </data>
+  <data name="Presence_Playing" xml:space="preserve">
+    <value>playing {0}</value>
+  </data>
+  <data name="Presence_Listening" xml:space="preserve">
+    <value>listening to {0}</value>
+  </data>
+  <data name="Presence_Watching" xml:space="preserve">
+    <value>watching {0}</value>
+  </data>
+  <data name="Presence_Streaming" xml:space="preserve">
+    <value>streaming {0}</value>
+  </data>
+  <data name="GuildTabChannels.Header" xml:space="preserve">
+    <value>channels</value>
+  </data>
+  <data name="GuildTabVoice.Header" xml:space="preserve">
+    <value>voice</value>
+  </data>
+  <data name="GuildTabMembers.Header" xml:space="preserve">
+    <value>members</value>
+  </data>
+  <data name="Guild_NoMembers" xml:space="preserve">
+    <value>no members loaded yet</value>
+  </data>
+  <data name="Guild_MembersOnline" xml:space="preserve">
+    <value>online</value>
+  </data>
+  <data name="Guild_MembersOffline" xml:space="preserve">
+    <value>offline</value>
+  </data>
+  <data name="Guild_Error" xml:space="preserve">
+    <value>error: {0}</value>
+  </data>
+  <data name="Guild_NoChannels" xml:space="preserve">
+    <value>no channels available</value>
+  </data>
+  <data name="Guild_NoVoice" xml:space="preserve">
+    <value>no voice channels</value>
+  </data>
+  <data name="Guild_Announcements" xml:space="preserve">
+    <value>announcements · </value>
+  </data>
+  <data name="Guild_Forum" xml:space="preserve">
+    <value>forum · </value>
+  </data>
+  <data name="Guild_Stage" xml:space="preserve">
+    <value>stage · </value>
+  </data>
+  <data name="Guild_YouAreHere" xml:space="preserve">
+    <value>you are here</value>
+  </data>
+  <data name="Guild_Empty" xml:space="preserve">
+    <value>empty</value>
+  </data>
+  <data name="Guild_OneStream" xml:space="preserve">
+    <value> · streaming</value>
+  </data>
+  <data name="Guild_Streams" xml:space="preserve">
+    <value> · streams: {0}</value>
+  </data>
+  <data name="Guild_AndMore" xml:space="preserve">
+    <value>and {0} more</value>
+  </data>
+  <data name="FriendsTitle.Text" xml:space="preserve">
+    <value>friends</value>
+  </data>
+  <data name="FriendsTabOnline.Header" xml:space="preserve">
+    <value>online</value>
+  </data>
+  <data name="FriendsTabAll.Header" xml:space="preserve">
+    <value>all</value>
+  </data>
+  <data name="FriendsTabRequests.Header" xml:space="preserve">
+    <value>requests</value>
+  </data>
+  <data name="FriendsTabBlocked.Header" xml:space="preserve">
+    <value>blocked</value>
+  </data>
+  <data name="ProfileTitle.Text" xml:space="preserve">
+    <value>profile</value>
+  </data>
+  <data name="ProfileLoading.Text" xml:space="preserve">
+    <value>loading…</value>
+  </data>
+  <data name="ProfileBanner.Text" xml:space="preserve">
+    <value>BANNER</value>
+  </data>
+  <data name="PickBannerButton.Content" xml:space="preserve">
+    <value>choose a picture</value>
+  </data>
+  <data name="RemoveBannerButton.Content" xml:space="preserve">
+    <value>remove picture</value>
+  </data>
+  <data name="NitroNote.Text" xml:space="preserve">
+    <value>Discord allows a banner picture only with Nitro. A banner color can be set without it.</value>
+  </data>
+  <data name="ProfileBannerColor.Text" xml:space="preserve">
+    <value>BANNER COLOR</value>
+  </data>
+  <data name="ProfileNoColor.Content" xml:space="preserve">
+    <value>no color</value>
+  </data>
+  <data name="ProfileAboutMe.Text" xml:space="preserve">
+    <value>ABOUT ME</value>
+  </data>
+  <data name="BioBox.PlaceholderText" xml:space="preserve">
+    <value>Tell people about yourself</value>
+  </data>
+  <data name="ProfilePronouns.Text" xml:space="preserve">
+    <value>PRONOUNS</value>
+  </data>
+  <data name="PronounsBox.PlaceholderText" xml:space="preserve">
+    <value>e.g. he/him</value>
+  </data>
+  <data name="SaveButton.Content" xml:space="preserve">
+    <value>save</value>
+  </data>
+  <data name="Profile_LoadFailed" xml:space="preserve">
+    <value>Could not load the profile: {0}</value>
+  </data>
+  <data name="Profile_TooBig" xml:space="preserve">
+    <value>The picture is larger than 10 MB, Discord will not accept it.</value>
+  </data>
+  <data name="Profile_Picked" xml:space="preserve">
+    <value>Picture chosen. Tap “save”.</value>
+  </data>
+  <data name="Profile_OpenFailed" xml:space="preserve">
+    <value>Could not open the picture: {0}</value>
+  </data>
+  <data name="Profile_NoChanges" xml:space="preserve">
+    <value>No changes.</value>
+  </data>
+  <data name="Profile_Saving" xml:space="preserve">
+    <value>Saving…</value>
+  </data>
+  <data name="Profile_Saved" xml:space="preserve">
+    <value>Saved.</value>
+  </data>
+  <data name="Profile_Rejected" xml:space="preserve">
+    <value>Discord did not accept the changes: {0}</value>
+  </data>
+  <data name="Overlay_NitroSince" xml:space="preserve">
+    <value>Nitro since {0}</value>
+  </data>
+  <data name="Profile_ActivityHeader" xml:space="preserve">
+    <value>ACTIVITY</value>
+  </data>
+  <data name="Profile_RecentActivityHeader" xml:space="preserve">
+    <value>RECENTLY PLAYED</value>
+  </data>
+  <data name="Profile_ActPlaying" xml:space="preserve">
+    <value>PLAYING</value>
+  </data>
+  <data name="Profile_ActListening" xml:space="preserve">
+    <value>LISTENING TO</value>
+  </data>
+  <data name="Profile_ActWatching" xml:space="preserve">
+    <value>WATCHING</value>
+  </data>
+  <data name="Profile_ActStreaming" xml:space="preserve">
+    <value>STREAMING</value>
+  </data>
+  <data name="Profile_ActCompeting" xml:space="preserve">
+    <value>COMPETING IN</value>
+  </data>
+  <data name="Profile_WidgetCurrentGames" xml:space="preserve">
+    <value>CURRENTLY PLAYING</value>
+  </data>
+  <data name="Profile_WidgetFavoriteGames" xml:space="preserve">
+    <value>FAVORITE GAMES</value>
+  </data>
+  <data name="Profile_WidgetPlayedGames" xml:space="preserve">
+    <value>PLAYED GAMES</value>
+  </data>
+  <data name="Profile_WidgetWantToPlay" xml:space="preserve">
+    <value>WANT TO PLAY</value>
+  </data>
+  <data name="Profile_WidgetGamesFallback" xml:space="preserve">
+    <value>GAMES</value>
+  </data>
+  <data name="Profile_NoConnections" xml:space="preserve">
+    <value>No connected accounts</value>
+  </data>
+  <data name="Profile_Elapsed" xml:space="preserve">
+    <value>{0} elapsed</value>
+  </data>
+  <data name="Profile_DurationHoursMin" xml:space="preserve">
+    <value>{0}h {1}m</value>
+  </data>
+  <data name="Profile_DurationMin" xml:space="preserve">
+    <value>{0}m</value>
+  </data>
+  <data name="Profile_JustNow" xml:space="preserve">
+    <value>just now</value>
+  </data>
+  <data name="Profile_MinutesAgo" xml:space="preserve">
+    <value>{0}m ago</value>
+  </data>
+  <data name="Profile_HoursAgo" xml:space="preserve">
+    <value>{0}h ago</value>
+  </data>
+  <data name="Profile_DaysAgo" xml:space="preserve">
+    <value>{0}d ago</value>
+  </data>
+  <data name="Profile_StreakDays" xml:space="preserve">
+    <value>{0}d streak</value>
+  </data>
+  <data name="Profile_MessageButton" xml:space="preserve">
+    <value>message</value>
+  </data>
+  <data name="SettingsTitle.Text" xml:space="preserve">
+    <value>settings</value>
+  </data>
+  <data name="Settings_Profile" xml:space="preserve">
+    <value>profile</value>
+  </data>
+  <data name="Settings_Profile_Desc" xml:space="preserve">
+    <value>about me, pronouns, banner and its color</value>
+  </data>
+  <data name="Settings_Account" xml:space="preserve">
+    <value>account</value>
+  </data>
+  <data name="Settings_Account_Desc" xml:space="preserve">
+    <value>name, avatar, accounts</value>
+  </data>
+  <data name="Settings_Messages" xml:space="preserve">
+    <value>messages</value>
+  </data>
+  <data name="Settings_Messages_Desc" xml:space="preserve">
+    <value>chat display, attachments, emoji</value>
+  </data>
+  <data name="Settings_Notifications" xml:space="preserve">
+    <value>notifications</value>
+  </data>
+  <data name="Settings_Notifications_Desc" xml:space="preserve">
+    <value>alerts, live tile, friends on the tile</value>
+  </data>
+  <data name="Settings_Appearance" xml:space="preserve">
+    <value>appearance</value>
+  </data>
+  <data name="Settings_Appearance_Desc" xml:space="preserve">
+    <value>app theme and colors</value>
+  </data>
+  <data name="Settings_Media" xml:space="preserve">
+    <value>media</value>
+  </data>
+  <data name="Settings_Media_Desc" xml:space="preserve">
+    <value>photos, videos, transcoding</value>
+  </data>
+  <data name="Settings_Voice" xml:space="preserve">
+    <value>voice</value>
+  </data>
+  <data name="Settings_Voice_Desc" xml:space="preserve">
+    <value>microphone, speaker, call mode, report</value>
+  </data>
+  <data name="Settings_Security" xml:space="preserve">
+    <value>security</value>
+  </data>
+  <data name="Settings_Security_Desc" xml:space="preserve">
+    <value>Windows Hello, hidden content</value>
+  </data>
+  <data name="Settings_About" xml:space="preserve">
+    <value>about</value>
+  </data>
+  <data name="Settings_About_Desc" xml:space="preserve">
+    <value>version, what's new, licenses</value>
+  </data>
+  <data name="Settings_Animations" xml:space="preserve">
+    <value>animations</value>
+  </data>
+  <data name="Settings_Report" xml:space="preserve">
+    <value>report</value>
+  </data>
+  <data name="Settings_Report_Desc" xml:space="preserve">
+    <value>copy a report for the developer to the clipboard</value>
+  </data>
+  <data name="Settings_Build" xml:space="preserve">
+    <value>client build</value>
+  </data>
+  <data name="Settings_AnimationsOn" xml:space="preserve">
+    <value>on: pages and tiles fly in like on Windows Phone</value>
+  </data>
+  <data name="Settings_AnimationsOff" xml:space="preserve">
+    <value>off: pages open instantly</value>
+  </data>
+  <data name="Settings_RichPresence" xml:space="preserve">
+    <value>Lyracord status</value>
+  </data>
+  <data name="Settings_RichPresenceOn" xml:space="preserve">
+    <value>on: shows "Playing Lyracord · Windows 10 Mobile" in Discord</value>
+  </data>
+  <data name="Settings_RichPresenceOff" xml:space="preserve">
+    <value>off: does not broadcast Lyracord activity</value>
+  </data>
+  <data name="Login_Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Settings_Language" xml:space="preserve">
+    <value>language</value>
+  </data>
+  <data name="Settings_LanguageSystem" xml:space="preserve">
+    <value>System language</value>
+  </data>
+  <data name="Settings_Cache" xml:space="preserve">
+    <value>image cache</value>
+  </data>
+  <data name="Settings_CacheLoading" xml:space="preserve">
+    <value>calculating size…</value>
+  </data>
+  <data name="Settings_CacheStats" xml:space="preserve">
+    <value>{0} files · {1} MB (tap to clear)</value>
+  </data>
+  <data name="Settings_CacheCleared" xml:space="preserve">
+    <value>cache cleared</value>
+  </data>
+  <data name="Settings_BuildCustom" xml:space="preserve">
+    <value>{0} (custom). New Discord features depend on it; applies after a restart</value>
+  </data>
+  <data name="Settings_BuildBuiltIn" xml:space="preserve">
+    <value>{0} (built-in). New Discord features depend on it</value>
+  </data>
+  <data name="Settings_BuildHelp" xml:space="preserve">
+    <value>Build number from Discord in a browser: settings → bottom of the left menu, “Stable NNNNNN”. Empty means built-in. Applies after a restart.</value>
+  </data>
+  <data name="Common_Save" xml:space="preserve">
+    <value>save</value>
+  </data>
+  <data name="Common_Cancel" xml:space="preserve">
+    <value>cancel</value>
+  </data>
+  <data name="Common_Close" xml:space="preserve">
+    <value>close</value>
+  </data>
+  <data name="Settings_ReportCopiedTitle" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="Settings_ReportCopied" xml:space="preserve">
+    <value>The report has been copied to the clipboard. Paste it into a message.</value>
+  </data>
+  <data name="StreamClose.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Stream_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Stream_Title" xml:space="preserve">
+    <value>Stream: {0}</value>
+  </data>
+  <data name="Stream_Connecting" xml:space="preserve">
+    <value>Connecting…</value>
+  </data>
+  <data name="Stream_Error" xml:space="preserve">
+    <value>Error ({0}): {1}</value>
+  </data>
+  <data name="Stream_Ended" xml:space="preserve">
+    <value>The stream has ended</value>
+  </data>
+  <data name="Stream_Closed" xml:space="preserve">
+    <value>Connection closed (code {0})</value>
+  </data>
+  <data name="Stream_DecoderError" xml:space="preserve">
+    <value>Decoder error: {0}</value>
+  </data>
+  <data name="Stream_UnsupportedCodec" xml:space="preserve">
+    <value>Video codec {0} is not supported (H.264 required)</value>
+  </data>
+  <data name="Stream_Volume" xml:space="preserve">
+    <value>Stream sound</value>
+  </data>
+  <data name="Voice_Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Voice_Microphone" xml:space="preserve">
+    <value>Microphone</value>
+  </data>
+  <data name="Voice_Sound" xml:space="preserve">
+    <value>Sound</value>
+  </data>
+  <data name="Voice_Settings" xml:space="preserve">
+    <value>Voice settings</value>
+  </data>
+  <data name="Voice_Disconnect" xml:space="preserve">
+    <value>Disconnect</value>
+  </data>
+  <data name="Voice_AudioSpeaker" xml:space="preserve">
+    <value>Speakerphone</value>
+  </data>
+  <data name="Voice_AudioEarpiece" xml:space="preserve">
+    <value>Earpiece</value>
+  </data>
+  <data name="Voice_AudioHeadset" xml:space="preserve">
+    <value>Headset</value>
+  </data>
+  <data name="Voice_AudioBluetooth" xml:space="preserve">
+    <value>Bluetooth</value>
+  </data>
+  <data name="WatchStreamText.Text" xml:space="preserve">
+    <value>Watch stream</value>
+  </data>
+  <data name="Nav_StreamTitle" xml:space="preserve">
+    <value>Stream</value>
+  </data>
+  <data name="Nav_StreamJoinFirst" xml:space="preserve">
+    <value>To watch the stream, join this voice channel first.</value>
+  </data>
+  <data name="Captcha_Unsupported" xml:space="preserve">
+    <value>Discord asked to solve a captcha, but it cannot be shown on this device. Do this action in a browser or the official Discord app, then try again here.</value>
+  </data>
+  <data name="VoiceCallMode.Title" xml:space="preserve">
+    <value>Call mode (phone)</value>
+  </data>
+  <data name="VoiceCallMode.Description" xml:space="preserve">
+    <value>Windows 10 Mobile only: voice goes like a phone call, through the speakerphone. Turn it off if there is no sound in this mode. Takes effect from the next connection.</value>
+  </data>
+  <data name="VoiceDiagTitle.Text" xml:space="preserve">
+    <value>Voice diagnostics</value>
+  </data>
+  <data name="VoiceDiagText.Text" xml:space="preserve">
+    <value>The tests record 4 seconds from the microphone and play it back right away: speak during the recording and note whether you heard yourself. Discord is not involved in the tests. The log of the last voice connection goes into the report automatically.</value>
+  </data>
+  <data name="MicTestMediaButton.Content" xml:space="preserve">
+    <value>Test: normal sound</value>
+  </data>
+  <data name="MicTestCallButton.Content" xml:space="preserve">
+    <value>Test: call mode</value>
+  </data>
+  <data name="VoiceRefreshReport.Content" xml:space="preserve">
+    <value>Refresh report</value>
+  </data>
+  <data name="VoiceCopyReport.Content" xml:space="preserve">
+    <value>Copy report</value>
+  </data>
+  <data name="VoiceDiag_Recording" xml:space="preserve">
+    <value>Recording 4 seconds — speak… then the recording will play.</value>
+  </data>
+  <data name="VoiceDiag_Done" xml:space="preserve">
+    <value>Test finished. Did you hear yourself? Write it together with the report.</value>
+  </data>
+  <data name="VoiceDiag_Copied" xml:space="preserve">
+    <value>The report has been copied to the clipboard.</value>
+  </data>
+  <data name="FriendsLiveTile.Title" xml:space="preserve">
+    <value>Friends on the live tile</value>
+  </data>
+  <data name="FriendsLiveTile.Description" xml:space="preserve">
+    <value>Friends' avatars roll across the Start tile, like in People. Those online come first.</value>
+  </data>
+  <data name="AboutTitle.Text" xml:space="preserve">
+    <value>about</value>
+  </data>
+  <data name="About_Description" xml:space="preserve">
+    <value>A free Discord client for Windows 10 Mobile: voice with DAVE encryption, stream viewing, Metro design.</value>
+  </data>
+  <data name="About_Developer" xml:space="preserve">
+    <value>developer: {0}</value>
+  </data>
+  <data name="About_WhatsNew" xml:space="preserve">
+    <value>what's new</value>
+  </data>
+  <data name="About_Thanks" xml:space="preserve">
+    <value>acknowledgements</value>
+  </data>
+  <data name="About_License" xml:space="preserve">
+    <value>license {0}</value>
+  </data>
+  <data name="Credit_Unicord" xml:space="preserve">
+    <value>the client Lyracord is based on · © 2020 Thomas May (WamWooWam), UnicordDev</value>
+  </data>
+  <data name="Credit_Libdave" xml:space="preserve">
+    <value>end-to-end encryption for voice (DAVE) · © 2024 Discord</value>
+  </data>
+  <data name="Credit_Mlspp" xml:space="preserve">
+    <value>the MLS protocol for libdave · © 2018 Cisco Systems</value>
+  </data>
+  <data name="Credit_OpenSSL" xml:space="preserve">
+    <value>cryptography for libdave · © 1998-2025 The OpenSSL Project Authors</value>
+  </data>
+  <data name="Credit_WebRTC" xml:space="preserve">
+    <value>audio engine (webrtc-uwp) · © 2011 The WebRTC project authors</value>
+  </data>
+  <data name="Credit_DSharpPlus" xml:space="preserve">
+    <value>Discord API library · © 2015 Mike Santiago, © 2016-2023 DSharpPlus Contributors</value>
+  </data>
+  <data name="Credit_OpusSodium" xml:space="preserve">
+    <value>audio codec and encryption</value>
+  </data>
+  <data name="Credit_Toolkit" xml:space="preserve">
+    <value>UI controls · © .NET Foundation</value>
+  </data>
+  <data name="Credit_Newtonsoft" xml:space="preserve">
+    <value>reading Discord data · © 2007 James Newton-King</value>
+  </data>
+  <data name="Profile_CallButton" xml:space="preserve">
+    <value>call</value>
+  </data>
+  <data name="Voice_WaitingForPeer" xml:space="preserve">
+    <value>waiting for recipient…</value>
+  </data>
+  <data name="Chat_SystemEvent" xml:space="preserve">
+    <value>{0} · Discord event (#{1})</value>
+  </data>
+  <data name="Hub_UpdateAvailable" xml:space="preserve">
+    <value>update available → {0}</value>
+  </data>
+  <data name="About_UpdatesHeader" xml:space="preserve">
+    <value>updates (github)</value>
+  </data>
+  <data name="Update_DownloadButton" xml:space="preserve">
+    <value>download .appx</value>
+  </data>
+  <data name="Update_DownloadVersion" xml:space="preserve">
+    <value>update to {0} (.appx)</value>
+  </data>
+  <data name="Update_CheckButton" xml:space="preserve">
+    <value>check updates</value>
+  </data>
+  <data name="Update_StatusChecking" xml:space="preserve">
+    <value>Checking GitHub Releases…</value>
+  </data>
+  <data name="Update_StatusAvailable" xml:space="preserve">
+    <value>Update available on GitHub: {0}</value>
+  </data>
+  <data name="Update_StatusUpToDate" xml:space="preserve">
+    <value>Up to date ({0})</value>
+  </data>
+  <data name="Update_InstalledVersion" xml:space="preserve">
+    <value>Installed: {0} ({1})</value>
+  </data>
+  <data name="Update_StatusNoReleases" xml:space="preserve">
+    <value>{0} · ready for GitHub Releases sync</value>
+  </data>
+  <data name="Update_StatusError" xml:space="preserve">
+    <value>Could not check GitHub: {0}</value>
+  </data>
+  <data name="Update_DownloadingStart" xml:space="preserve">
+    <value>Starting download…</value>
+  </data>
+  <data name="Update_DownloadingProgress" xml:space="preserve">
+    <value>Downloading: {0}% ({1} / {2} MB)</value>
+  </data>
+  <data name="Update_DownloadedSaved" xml:space="preserve">
+    <value>Saved to Downloads: {0}</value>
+  </data>
+  <data name="Settings_GitHubRepo" xml:space="preserve">
+    <value>GitHub updates</value>
+  </data>
+  <data name="Settings_GitHubRepoDesc" xml:space="preserve">
+    <value>sync versions and download .appx updates from GitHub Releases</value>
+  </data>
+  <data name="Settings_GitHubRepoHelp" xml:space="preserve">
+    <value>GitHub repository (owner/repo) for checking new releases, synchronizing version history, and downloading .appx updates. Empty resets to lambdawesta/Lyracord.</value>
+  </data>
+  <data name="Common_Search" xml:space="preserve">
+    <value>search</value>
+  </data>
+  <data name="Common_NothingFound" xml:space="preserve">
+    <value>nothing found</value>
+  </data>
+  <data name="Friends_SearchPlaceholder" xml:space="preserve">
+    <value>search friends by name or username…</value>
+  </data>
+  <data name="Friends_IncomingRequest" xml:space="preserve">
+    <value>incoming friend request</value>
+  </data>
+  <data name="Friends_OutgoingRequest" xml:space="preserve">
+    <value>outgoing friend request</value>
+  </data>
+  <data name="Servers_SearchPlaceholder" xml:space="preserve">
+    <value>search servers, chats, friends…</value>
+  </data>
+  <data name="Social_AddFriendTitle" xml:space="preserve">
+    <value>add friend</value>
+  </data>
+  <data name="Social_AddFriendPlaceholder" xml:space="preserve">
+    <value>username (e.g. username)</value>
+  </data>
+  <data name="Social_AddFriendHint" xml:space="preserve">
+    <value>Enter a Discord username (or legacy name#0000).</value>
+  </data>
+  <data name="Social_AddFriendEmpty" xml:space="preserve">
+    <value>Please enter a username.</value>
+  </data>
+  <data name="Social_SendRequest" xml:space="preserve">
+    <value>send request</value>
+  </data>
+  <data name="Social_Sending" xml:space="preserve">
+    <value>Sending request…</value>
+  </data>
+  <data name="Social_JoinServerTitle" xml:space="preserve">
+    <value>join server</value>
+  </data>
+  <data name="Social_JoinServerPlaceholder" xml:space="preserve">
+    <value>discord.gg/code or invite code</value>
+  </data>
+  <data name="Social_JoinServerHint" xml:space="preserve">
+    <value>Paste a Discord invite link or short invite code.</value>
+  </data>
+  <data name="Social_JoinServerEmpty" xml:space="preserve">
+    <value>Please enter an invite link or code.</value>
+  </data>
+  <data name="Social_JoinButton" xml:space="preserve">
+    <value>join</value>
+  </data>
+  <data name="Social_Joining" xml:space="preserve">
+    <value>Joining server…</value>
+  </data>
+  <data name="Social_OpenInBrowser" xml:space="preserve">
+    <value>open in browser</value>
+  </data>
+  <data name="Social_CaptchaRequired" xml:space="preserve">
+    <value>Discord requested a CAPTCHA verification. Open the link in your browser to finish.</value>
+  </data>
+  <data name="Social_InviteNotFound" xml:space="preserve">
+    <value>Invite not found or expired.</value>
+  </data>
+  <data name="Social_UserNotFound" xml:space="preserve">
+    <value>User not found. Check the username spelling.</value>
+  </data>
+  <data name="Profile_FriendAdd" xml:space="preserve">
+    <value>add friend</value>
+  </data>
+  <data name="Profile_FriendInList" xml:space="preserve">
+    <value>friends</value>
+  </data>
+  <data name="Profile_FriendAccept" xml:space="preserve">
+    <value>accept</value>
+  </data>
+  <data name="Profile_FriendPending" xml:space="preserve">
+    <value>request sent</value>
+  </data>
+  <data name="Profile_FriendUnblock" xml:space="preserve">
+    <value>unblock</value>
+  </data>
+  <data name="Profile_RemoveFriendTitle" xml:space="preserve">
+    <value>remove friend?</value>
+  </data>
+  <data name="Profile_RemoveFriendBody" xml:space="preserve">
+    <value>Remove {0} from your friends list?</value>
+  </data>
+  <data name="Profile_RemoveFriendConfirm" xml:space="preserve">
+    <value>remove</value>
+  </data>
+  <data name="About_Changes" xml:space="preserve">
+    <value># 1.18.16
+instant Metro search across servers, direct messages, and friends in both the Start and Friends hubs
+add friend by username, join servers via invite link (discord.gg/...), accept/decline requests directly in the Pending tab, and manage friendship right from any profile card
+fixed crashes in both server text channels and direct messages (ArgumentException on null icon/badge URLs)
+# 1.18.15
+fixed UI crash (ArgumentException) when opening direct message chats with null/missing badge or icon URLs
+fixed stickers and images not loading in Metro chat bubbles (removed x:Load + x:Phase conflict, fixed StickerControl template timing &amp; GIF stickers, guarded zero-dimension image URLs)
+handled newer Discord message types (e.g. type 67) cleanly instead of showing "Unknown system message type 67!"
+# 1.18.14
+fixed DM voice call tiles so participants appear when they join and disappear when they leave (with Gateway OP 13 CALL_CONNECT subscription, join/leave chimes, and a live "waiting for recipient…" / participant count header)
+fixed the first opened conversation's avatar sticking across subsequent chats
+# 1.18.13
+in-app GitHub Releases updater &amp; version sync: automatic update indicator on the start hub tile, live release notes sync, and architecture-matched (.appx) download on the "about" page
+# 1.18.12
+voice calls in direct messages (1-on-1 DMs and group DMs): Call button in DM chat headers and Metro profile cards, outgoing ring, DAVE E2EE voice, and active call tile on the start hub
+# 1.18.11
+unified Windows Phone Metro speech bubbles across server text channels and direct messages (with square avatars, role colours, server tags, and profile tap)
+# 1.18.10
+support tile now opens the Lyracord Telegram community (t.me/lyracord)
+fixed pressing Back on the profile overlay from the start hub exiting the app instead of closing the profile
+# 1.18.9
+new sharp geometric Metro "L" app logo across all tiles, splash screens, and Rich Presence (built-in Lyracord App ID)
+profile card redesigned in pure Windows Phone Metro style (full-bleed AMOLED, square avatar with status bar, Metro light typography, square server icons)
+all 7 settings sections unified in Metro style (no WinUI NavigationView chrome) and Notifications settings unlocked and fixed
+# 1.18.8
+Rich Presence: optional "Lyracord · Windows 10 Mobile" status in Discord (toggle in Metro settings)
+server page: added a third "members" tab next to channels and voice (online/roles/offline, server tags, tap to open profile)
+# 1.18.7
+profile card now scrolls smoothly on phone screens with a close button and clear bottom margin
+profile shows live activity (games, Spotify, streams), recently played games (content-inventory), profile game widgets, and connected accounts
+# 1.18.6
+server tags (primary_guild) in Metro square style: badge icon and tag next to usernames in chat, profiles, start hub, friends, direct messages, and voice
+# 1.18.5
+sign-in screen and token dialog raised well clear of the Windows navigation bar
+language selector added before sign-in and in Metro settings (English, Russian, Ukrainian, System)
+# 1.18.4
+desktop voice service reconnect parity (handles server changes and disconnects)
+updated documentation and cleaned up unused files
+# 1.18.3
+fixed deafen (mute sound): turning sound off and back on works reliably without breaking playback
+mic mute and deafen buttons added to the stream player bar
+image cache size limit (50 MB) and clear-cache item in settings
+buffered and size-capped stream/voice logs, lighter diagnostic report
+# 1.18.2
+audio output switch during calls (speaker, earpiece, headset, Bluetooth) and headset hot-plug handling
+voice reconnect counter resets after a stable connection
+fixed settings migration overwriting local settings on launch
+smoother stream closing, clear message for unsupported video codecs, DM voice safety
+# 1.18.1
+fixed crash and freeze when ending a voice call
+voice calls keep running when the screen is locked
+# 1.18.0
+English and Ukrainian interface
+# 1.17.4
+publisher shown on install: lambdawesta
+# 1.17.3
+sign-in dialog buttons no longer hide behind the navigation bar
+after a wrong token: back to sign-in, not an empty friends page
+# 1.17.2
+a wrong or expired token: a clear message and back to sign-in instead of endless connecting
+captcha on the phone: an explanation instead of a crash
+# 1.17.1
+the token is no longer stored as plain text in the app settings
+# 1.17.0
+own package name and certificate (installs as a new app)
+step-by-step token instructions instead of a placeholder link
+# 1.16.2
+Lyracord presents itself as the current Discord build: new profile badges
+the build number can be changed: settings → client build
+# 1.16.0
+Windows Phone animations: pages fly in as a turnstile, tiles and lists as a feather
+# 1.15.x
+faster start: fast parsing of channels, roles and permissions, no extra requests before connecting
+avatars cached on the phone, full-screen stream in landscape</value>
+  </data>
+</root>

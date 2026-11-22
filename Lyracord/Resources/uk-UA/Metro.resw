@@ -1,0 +1,955 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PluralRules" xml:space="preserve">
+    <value>slavic</value>
+  </data>
+  <data name="HubTitle.Text" xml:space="preserve">
+    <value>старт</value>
+  </data>
+  <data name="HubSections.Text" xml:space="preserve">
+    <value>РОЗДІЛИ</value>
+  </data>
+  <data name="HubCallLabel.Text" xml:space="preserve">
+    <value>у дзвінку</value>
+  </data>
+  <data name="HubCallName.Text" xml:space="preserve">
+    <value>голосовий канал</value>
+  </data>
+  <data name="HubStartSmall.Text" xml:space="preserve">
+    <value>канали та особисті</value>
+  </data>
+  <data name="HubStartBig.Text" xml:space="preserve">
+    <value>почати</value>
+  </data>
+  <data name="HubPeopleSmall.Text" xml:space="preserve">
+    <value>люди</value>
+  </data>
+  <data name="HubFriendsBig.Text" xml:space="preserve">
+    <value>друзі</value>
+  </data>
+  <data name="HubVersionSmall.Text" xml:space="preserve">
+    <value>версія</value>
+  </data>
+  <data name="HubAboutBig.Text" xml:space="preserve">
+    <value>про версію</value>
+  </data>
+  <data name="HubSoonSmall.Text" xml:space="preserve">
+    <value>приєднатися до спільноти в telegram</value>
+  </data>
+  <data name="HubSupportBig.Text" xml:space="preserve">
+    <value>підтримати</value>
+  </data>
+  <data name="HubRecent.Text" xml:space="preserve">
+    <value>НЕЩОДАВНІ</value>
+  </data>
+  <data name="HubEditProfile.Content" xml:space="preserve">
+    <value>змінити профіль</value>
+  </data>
+  <data name="HubTileColor.Content" xml:space="preserve">
+    <value>колір плиток</value>
+  </data>
+  <data name="HubSettings.Content" xml:space="preserve">
+    <value>налаштування</value>
+  </data>
+  <data name="Hub_Version" xml:space="preserve">
+    <value>версія {0}</value>
+  </data>
+  <data name="Hub_Online" xml:space="preserve">
+    <value>{0} в мережі</value>
+  </data>
+  <data name="Hub_People" xml:space="preserve">
+    <value>люди</value>
+  </data>
+  <data name="Hub_ChannelsAndMessages" xml:space="preserve">
+    <value>канали та особисті</value>
+  </data>
+  <data name="Hub_InCall" xml:space="preserve">
+    <value>у дзвінку · {0} · {1}</value>
+  </data>
+  <data name="Hub_ColorsMulti" xml:space="preserve">
+    <value>різнокольорові</value>
+  </data>
+  <data name="Hub_ColorsAccent" xml:space="preserve">
+    <value>колір акценту системи</value>
+  </data>
+  <data name="Hub_SupportTitle" xml:space="preserve">
+    <value>Підтримати проєкт</value>
+  </data>
+  <data name="Hub_SupportText" xml:space="preserve">
+    <value>Незабаром тут з'явиться спосіб підтримати Lyracord. Дякуємо, що користуєтеся!</value>
+  </data>
+  <data name="Unread_One" xml:space="preserve">
+    <value>{0} непрочитаний</value>
+  </data>
+  <data name="Unread_Few" xml:space="preserve">
+    <value>{0} непрочитані</value>
+  </data>
+  <data name="Unread_Many" xml:space="preserve">
+    <value>{0} непрочитаних</value>
+  </data>
+  <data name="People_One" xml:space="preserve">
+    <value>{0} людина</value>
+  </data>
+  <data name="People_Few" xml:space="preserve">
+    <value>{0} людини</value>
+  </data>
+  <data name="People_Many" xml:space="preserve">
+    <value>{0} людей</value>
+  </data>
+  <data name="Members_One" xml:space="preserve">
+    <value>{0} учасник</value>
+  </data>
+  <data name="Members_Few" xml:space="preserve">
+    <value>{0} учасники</value>
+  </data>
+  <data name="Members_Many" xml:space="preserve">
+    <value>{0} учасників</value>
+  </data>
+  <data name="NewMessages_One" xml:space="preserve">
+    <value>{0} нове повідомлення</value>
+  </data>
+  <data name="NewMessages_Few" xml:space="preserve">
+    <value>{0} нові повідомлення</value>
+  </data>
+  <data name="NewMessages_Many" xml:space="preserve">
+    <value>{0} нових повідомлень</value>
+  </data>
+  <data name="Color_lime" xml:space="preserve">
+    <value>лайм</value>
+  </data>
+  <data name="Color_green" xml:space="preserve">
+    <value>зелений</value>
+  </data>
+  <data name="Color_emerald" xml:space="preserve">
+    <value>смарагдовий</value>
+  </data>
+  <data name="Color_teal" xml:space="preserve">
+    <value>бірюзовий</value>
+  </data>
+  <data name="Color_cyan" xml:space="preserve">
+    <value>блакитний</value>
+  </data>
+  <data name="Color_cobalt" xml:space="preserve">
+    <value>кобальт</value>
+  </data>
+  <data name="Color_indigo" xml:space="preserve">
+    <value>індиго</value>
+  </data>
+  <data name="Color_violet" xml:space="preserve">
+    <value>фіолетовий</value>
+  </data>
+  <data name="Color_pink" xml:space="preserve">
+    <value>рожевий</value>
+  </data>
+  <data name="Color_magenta" xml:space="preserve">
+    <value>пурпуровий</value>
+  </data>
+  <data name="Color_crimson" xml:space="preserve">
+    <value>малиновий</value>
+  </data>
+  <data name="Color_red" xml:space="preserve">
+    <value>червоний</value>
+  </data>
+  <data name="Color_orange" xml:space="preserve">
+    <value>помаранчевий</value>
+  </data>
+  <data name="Color_amber" xml:space="preserve">
+    <value>бурштиновий</value>
+  </data>
+  <data name="Color_yellow" xml:space="preserve">
+    <value>жовтий</value>
+  </data>
+  <data name="Color_brown" xml:space="preserve">
+    <value>коричневий</value>
+  </data>
+  <data name="Color_olive" xml:space="preserve">
+    <value>оливковий</value>
+  </data>
+  <data name="Color_steel" xml:space="preserve">
+    <value>сталевий</value>
+  </data>
+  <data name="Color_mauve" xml:space="preserve">
+    <value>бузковий</value>
+  </data>
+  <data name="Color_taupe" xml:space="preserve">
+    <value>сіро-коричневий</value>
+  </data>
+  <data name="ServersTabServers.Header" xml:space="preserve">
+    <value>сервери</value>
+  </data>
+  <data name="ServersTabDirect.Header" xml:space="preserve">
+    <value>особисті</value>
+  </data>
+  <data name="ServersTabFriends.Header" xml:space="preserve">
+    <value>друзі</value>
+  </data>
+  <data name="Servers_Group" xml:space="preserve">
+    <value>група · {0}</value>
+  </data>
+  <data name="Servers_NobodyOnline" xml:space="preserve">
+    <value>нікого немає в мережі</value>
+  </data>
+  <data name="Presence_Offline" xml:space="preserve">
+    <value>не в мережі</value>
+  </data>
+  <data name="Presence_Online" xml:space="preserve">
+    <value>в мережі</value>
+  </data>
+  <data name="Presence_Idle" xml:space="preserve">
+    <value>неактивний</value>
+  </data>
+  <data name="Presence_DoNotDisturb" xml:space="preserve">
+    <value>не турбувати</value>
+  </data>
+  <data name="Presence_Playing" xml:space="preserve">
+    <value>грає в {0}</value>
+  </data>
+  <data name="Presence_Listening" xml:space="preserve">
+    <value>слухає {0}</value>
+  </data>
+  <data name="Presence_Watching" xml:space="preserve">
+    <value>дивиться {0}</value>
+  </data>
+  <data name="Presence_Streaming" xml:space="preserve">
+    <value>стрімить {0}</value>
+  </data>
+  <data name="GuildTabChannels.Header" xml:space="preserve">
+    <value>канали</value>
+  </data>
+  <data name="GuildTabVoice.Header" xml:space="preserve">
+    <value>голос</value>
+  </data>
+  <data name="GuildTabMembers.Header" xml:space="preserve">
+    <value>учасники</value>
+  </data>
+  <data name="Guild_NoMembers" xml:space="preserve">
+    <value>учасники ще не завантажені</value>
+  </data>
+  <data name="Guild_MembersOnline" xml:space="preserve">
+    <value>у мережі</value>
+  </data>
+  <data name="Guild_MembersOffline" xml:space="preserve">
+    <value>не в мережі</value>
+  </data>
+  <data name="Guild_Error" xml:space="preserve">
+    <value>помилка: {0}</value>
+  </data>
+  <data name="Guild_NoChannels" xml:space="preserve">
+    <value>немає доступних каналів</value>
+  </data>
+  <data name="Guild_NoVoice" xml:space="preserve">
+    <value>голосових каналів немає</value>
+  </data>
+  <data name="Guild_Announcements" xml:space="preserve">
+    <value>оголошення · </value>
+  </data>
+  <data name="Guild_Forum" xml:space="preserve">
+    <value>форум · </value>
+  </data>
+  <data name="Guild_Stage" xml:space="preserve">
+    <value>трибуна · </value>
+  </data>
+  <data name="Guild_YouAreHere" xml:space="preserve">
+    <value>ви тут</value>
+  </data>
+  <data name="Guild_Empty" xml:space="preserve">
+    <value>порожньо</value>
+  </data>
+  <data name="Guild_OneStream" xml:space="preserve">
+    <value> · іде трансляція</value>
+  </data>
+  <data name="Guild_Streams" xml:space="preserve">
+    <value> · трансляцій: {0}</value>
+  </data>
+  <data name="Guild_AndMore" xml:space="preserve">
+    <value>і ще {0}</value>
+  </data>
+  <data name="FriendsTitle.Text" xml:space="preserve">
+    <value>друзі</value>
+  </data>
+  <data name="FriendsTabOnline.Header" xml:space="preserve">
+    <value>в мережі</value>
+  </data>
+  <data name="FriendsTabAll.Header" xml:space="preserve">
+    <value>усі</value>
+  </data>
+  <data name="FriendsTabRequests.Header" xml:space="preserve">
+    <value>запити</value>
+  </data>
+  <data name="FriendsTabBlocked.Header" xml:space="preserve">
+    <value>заблоковані</value>
+  </data>
+  <data name="ProfileTitle.Text" xml:space="preserve">
+    <value>профіль</value>
+  </data>
+  <data name="ProfileLoading.Text" xml:space="preserve">
+    <value>завантаження…</value>
+  </data>
+  <data name="ProfileBanner.Text" xml:space="preserve">
+    <value>БАНЕР</value>
+  </data>
+  <data name="PickBannerButton.Content" xml:space="preserve">
+    <value>вибрати зображення</value>
+  </data>
+  <data name="RemoveBannerButton.Content" xml:space="preserve">
+    <value>прибрати зображення</value>
+  </data>
+  <data name="NitroNote.Text" xml:space="preserve">
+    <value>Discord дозволяє зображення банера лише з Nitro. Колір банера можна встановити й без нього.</value>
+  </data>
+  <data name="ProfileBannerColor.Text" xml:space="preserve">
+    <value>КОЛІР БАНЕРА</value>
+  </data>
+  <data name="ProfileNoColor.Content" xml:space="preserve">
+    <value>без кольору</value>
+  </data>
+  <data name="ProfileAboutMe.Text" xml:space="preserve">
+    <value>ПРО МЕНЕ</value>
+  </data>
+  <data name="BioBox.PlaceholderText" xml:space="preserve">
+    <value>Розкажіть про себе</value>
+  </data>
+  <data name="ProfilePronouns.Text" xml:space="preserve">
+    <value>ЗАЙМЕННИКИ</value>
+  </data>
+  <data name="PronounsBox.PlaceholderText" xml:space="preserve">
+    <value>наприклад, він/його</value>
+  </data>
+  <data name="SaveButton.Content" xml:space="preserve">
+    <value>зберегти</value>
+  </data>
+  <data name="Profile_LoadFailed" xml:space="preserve">
+    <value>Не вдалося завантажити профіль: {0}</value>
+  </data>
+  <data name="Profile_TooBig" xml:space="preserve">
+    <value>Зображення більше 10 МБ — Discord його не прийме.</value>
+  </data>
+  <data name="Profile_Picked" xml:space="preserve">
+    <value>Зображення вибрано. Натисніть «зберегти».</value>
+  </data>
+  <data name="Profile_OpenFailed" xml:space="preserve">
+    <value>Не вдалося відкрити зображення: {0}</value>
+  </data>
+  <data name="Profile_NoChanges" xml:space="preserve">
+    <value>Змін немає.</value>
+  </data>
+  <data name="Profile_Saving" xml:space="preserve">
+    <value>Зберігаю…</value>
+  </data>
+  <data name="Profile_Saved" xml:space="preserve">
+    <value>Збережено.</value>
+  </data>
+  <data name="Profile_Rejected" xml:space="preserve">
+    <value>Discord не прийняв зміни: {0}</value>
+  </data>
+  <data name="Overlay_NitroSince" xml:space="preserve">
+    <value>Nitro з {0}</value>
+  </data>
+  <data name="Profile_ActivityHeader" xml:space="preserve">
+    <value>АКТИВНІСТЬ</value>
+  </data>
+  <data name="Profile_RecentActivityHeader" xml:space="preserve">
+    <value>НЕЩОДАВНО ГРАВ(ЛА)</value>
+  </data>
+  <data name="Profile_ActPlaying" xml:space="preserve">
+    <value>ГРАЄ У</value>
+  </data>
+  <data name="Profile_ActListening" xml:space="preserve">
+    <value>СЛУХАЄ</value>
+  </data>
+  <data name="Profile_ActWatching" xml:space="preserve">
+    <value>ДИВИТЬСЯ</value>
+  </data>
+  <data name="Profile_ActStreaming" xml:space="preserve">
+    <value>СТРІМИТЬ</value>
+  </data>
+  <data name="Profile_ActCompeting" xml:space="preserve">
+    <value>ЗМАГАЄТЬСЯ У</value>
+  </data>
+  <data name="Profile_WidgetCurrentGames" xml:space="preserve">
+    <value>ЗАРАЗ ГРАЄ</value>
+  </data>
+  <data name="Profile_WidgetFavoriteGames" xml:space="preserve">
+    <value>УЛЮБЛЕНІ ІГРИ</value>
+  </data>
+  <data name="Profile_WidgetPlayedGames" xml:space="preserve">
+    <value>ГРАВ(ЛА) РАНІШЕ</value>
+  </data>
+  <data name="Profile_WidgetWantToPlay" xml:space="preserve">
+    <value>ХОЧЕ ПОГРАТИ</value>
+  </data>
+  <data name="Profile_WidgetGamesFallback" xml:space="preserve">
+    <value>ІГРИ</value>
+  </data>
+  <data name="Profile_NoConnections" xml:space="preserve">
+    <value>Немає підключених акаунтів</value>
+  </data>
+  <data name="Profile_Elapsed" xml:space="preserve">
+    <value>минуло {0}</value>
+  </data>
+  <data name="Profile_DurationHoursMin" xml:space="preserve">
+    <value>{0} год {1} хв</value>
+  </data>
+  <data name="Profile_DurationMin" xml:space="preserve">
+    <value>{0} хв</value>
+  </data>
+  <data name="Profile_JustNow" xml:space="preserve">
+    <value>щойно</value>
+  </data>
+  <data name="Profile_MinutesAgo" xml:space="preserve">
+    <value>{0} хв тому</value>
+  </data>
+  <data name="Profile_HoursAgo" xml:space="preserve">
+    <value>{0} год тому</value>
+  </data>
+  <data name="Profile_DaysAgo" xml:space="preserve">
+    <value>{0} дн. тому</value>
+  </data>
+  <data name="Profile_StreakDays" xml:space="preserve">
+    <value>серія {0} дн.</value>
+  </data>
+  <data name="Profile_MessageButton" xml:space="preserve">
+    <value>написати</value>
+  </data>
+  <data name="SettingsTitle.Text" xml:space="preserve">
+    <value>налаштування</value>
+  </data>
+  <data name="Settings_Profile" xml:space="preserve">
+    <value>профіль</value>
+  </data>
+  <data name="Settings_Profile_Desc" xml:space="preserve">
+    <value>про мене, займенники, банер і його колір</value>
+  </data>
+  <data name="Settings_Account" xml:space="preserve">
+    <value>обліковий запис</value>
+  </data>
+  <data name="Settings_Account_Desc" xml:space="preserve">
+    <value>ім'я, аватарка, облікові записи</value>
+  </data>
+  <data name="Settings_Messages" xml:space="preserve">
+    <value>повідомлення</value>
+  </data>
+  <data name="Settings_Messages_Desc" xml:space="preserve">
+    <value>вигляд чатів, вкладення, емодзі</value>
+  </data>
+  <data name="Settings_Notifications" xml:space="preserve">
+    <value>сповіщення</value>
+  </data>
+  <data name="Settings_Notifications_Desc" xml:space="preserve">
+    <value>оповіщення, жива плитка, друзі на плитці</value>
+  </data>
+  <data name="Settings_Appearance" xml:space="preserve">
+    <value>оформлення</value>
+  </data>
+  <data name="Settings_Appearance_Desc" xml:space="preserve">
+    <value>тема та кольори застосунку</value>
+  </data>
+  <data name="Settings_Media" xml:space="preserve">
+    <value>медіа</value>
+  </data>
+  <data name="Settings_Media_Desc" xml:space="preserve">
+    <value>фото, відео, перекодування</value>
+  </data>
+  <data name="Settings_Voice" xml:space="preserve">
+    <value>голос</value>
+  </data>
+  <data name="Settings_Voice_Desc" xml:space="preserve">
+    <value>мікрофон, динамік, режим дзвінка, звіт</value>
+  </data>
+  <data name="Settings_Security" xml:space="preserve">
+    <value>безпека</value>
+  </data>
+  <data name="Settings_Security_Desc" xml:space="preserve">
+    <value>Windows Hello, прихований вміст</value>
+  </data>
+  <data name="Settings_About" xml:space="preserve">
+    <value>про програму</value>
+  </data>
+  <data name="Settings_About_Desc" xml:space="preserve">
+    <value>версія, що нового, ліцензії</value>
+  </data>
+  <data name="Settings_Animations" xml:space="preserve">
+    <value>анімації</value>
+  </data>
+  <data name="Settings_Report" xml:space="preserve">
+    <value>звіт</value>
+  </data>
+  <data name="Settings_Report_Desc" xml:space="preserve">
+    <value>скопіювати звіт для розробника в буфер обміну</value>
+  </data>
+  <data name="Settings_Build" xml:space="preserve">
+    <value>збірка клієнта</value>
+  </data>
+  <data name="Settings_AnimationsOn" xml:space="preserve">
+    <value>увімкнено: сторінки й плитки влітають, як на Windows Phone</value>
+  </data>
+  <data name="Settings_AnimationsOff" xml:space="preserve">
+    <value>вимкнено: сторінки відкриваються одразу</value>
+  </data>
+  <data name="Settings_RichPresence" xml:space="preserve">
+    <value>статус Lyracord</value>
+  </data>
+  <data name="Settings_RichPresenceOn" xml:space="preserve">
+    <value>увімк: показує «Грає в Lyracord · Windows 10 Mobile» у Discord</value>
+  </data>
+  <data name="Settings_RichPresenceOff" xml:space="preserve">
+    <value>вимк: не надсилати статус Lyracord</value>
+  </data>
+  <data name="Login_Language" xml:space="preserve">
+    <value>Мова інтерфейсу</value>
+  </data>
+  <data name="Settings_Language" xml:space="preserve">
+    <value>мова</value>
+  </data>
+  <data name="Settings_LanguageSystem" xml:space="preserve">
+    <value>Системна</value>
+  </data>
+  <data name="Settings_Cache" xml:space="preserve">
+    <value>кеш зображень</value>
+  </data>
+  <data name="Settings_CacheLoading" xml:space="preserve">
+    <value>підрахунок розміру…</value>
+  </data>
+  <data name="Settings_CacheStats" xml:space="preserve">
+    <value>{0} файлів · {1} МБ (натисніть, щоб очистити)</value>
+  </data>
+  <data name="Settings_CacheCleared" xml:space="preserve">
+    <value>кеш очищено</value>
+  </data>
+  <data name="Settings_BuildCustom" xml:space="preserve">
+    <value>{0} (власна). Від неї залежать нові функції Discord; застосовується після перезапуску</value>
+  </data>
+  <data name="Settings_BuildBuiltIn" xml:space="preserve">
+    <value>{0} (вбудована). Від неї залежать нові функції Discord</value>
+  </data>
+  <data name="Settings_BuildHelp" xml:space="preserve">
+    <value>Номер збірки з вебверсії Discord: налаштування → унизу лівого меню, «Stable NNNNNN». Порожньо — вбудована. Застосовується після перезапуску.</value>
+  </data>
+  <data name="Common_Save" xml:space="preserve">
+    <value>зберегти</value>
+  </data>
+  <data name="Common_Cancel" xml:space="preserve">
+    <value>скасувати</value>
+  </data>
+  <data name="Common_Close" xml:space="preserve">
+    <value>закрити</value>
+  </data>
+  <data name="Settings_ReportCopiedTitle" xml:space="preserve">
+    <value>Звіт</value>
+  </data>
+  <data name="Settings_ReportCopied" xml:space="preserve">
+    <value>Звіт скопійовано до буфера обміну. Вставте його в повідомлення.</value>
+  </data>
+  <data name="StreamClose.Text" xml:space="preserve">
+    <value>Закрити</value>
+  </data>
+  <data name="Stream_Close" xml:space="preserve">
+    <value>Закрити</value>
+  </data>
+  <data name="Stream_Title" xml:space="preserve">
+    <value>Трансляція: {0}</value>
+  </data>
+  <data name="Stream_Connecting" xml:space="preserve">
+    <value>Підключення…</value>
+  </data>
+  <data name="Stream_Error" xml:space="preserve">
+    <value>Помилка ({0}): {1}</value>
+  </data>
+  <data name="Stream_Ended" xml:space="preserve">
+    <value>Трансляцію завершено</value>
+  </data>
+  <data name="Stream_Closed" xml:space="preserve">
+    <value>З'єднання закрито (код {0})</value>
+  </data>
+  <data name="Stream_DecoderError" xml:space="preserve">
+    <value>Помилка декодера: {0}</value>
+  </data>
+  <data name="Stream_UnsupportedCodec" xml:space="preserve">
+    <value>Відеокодек {0} не підтримується (потрібен H.264)</value>
+  </data>
+  <data name="Stream_Volume" xml:space="preserve">
+    <value>Звук трансляції</value>
+  </data>
+  <data name="Voice_Back" xml:space="preserve">
+    <value>Назад</value>
+  </data>
+  <data name="Voice_Microphone" xml:space="preserve">
+    <value>Мікрофон</value>
+  </data>
+  <data name="Voice_Sound" xml:space="preserve">
+    <value>Звук</value>
+  </data>
+  <data name="Voice_Settings" xml:space="preserve">
+    <value>Налаштування голосу</value>
+  </data>
+  <data name="Voice_Disconnect" xml:space="preserve">
+    <value>Від'єднатися</value>
+  </data>
+  <data name="Voice_AudioSpeaker" xml:space="preserve">
+    <value>Гучний зв'язок</value>
+  </data>
+  <data name="Voice_AudioEarpiece" xml:space="preserve">
+    <value>Розмовний динамік</value>
+  </data>
+  <data name="Voice_AudioHeadset" xml:space="preserve">
+    <value>Гарнітура</value>
+  </data>
+  <data name="Voice_AudioBluetooth" xml:space="preserve">
+    <value>Bluetooth</value>
+  </data>
+  <data name="WatchStreamText.Text" xml:space="preserve">
+    <value>Дивитися стрім</value>
+  </data>
+  <data name="Nav_StreamTitle" xml:space="preserve">
+    <value>Трансляція</value>
+  </data>
+  <data name="Nav_StreamJoinFirst" xml:space="preserve">
+    <value>Щоб дивитися трансляцію, спершу зайдіть у цей голосовий канал.</value>
+  </data>
+  <data name="Captcha_Unsupported" xml:space="preserve">
+    <value>Discord попросив пройти капчу, але на цьому пристрої її не можна показати. Виконайте цю дію в браузері або офіційному клієнті Discord, а потім повторіть тут.</value>
+  </data>
+  <data name="VoiceCallMode.Title" xml:space="preserve">
+    <value>Режим дзвінка (телефон)</value>
+  </data>
+  <data name="VoiceCallMode.Description" xml:space="preserve">
+    <value>Лише Windows 10 Mobile: голос іде як телефонний дзвінок, через гучний зв'язок. Вимкніть, якщо в цьому режимі немає звуку. Діє з наступного підключення.</value>
+  </data>
+  <data name="VoiceDiagTitle.Text" xml:space="preserve">
+    <value>Діагностика голосу</value>
+  </data>
+  <data name="VoiceDiagText.Text" xml:space="preserve">
+    <value>Тести записують 4 секунди з мікрофона й одразу відтворюють запис — говоріть під час запису й позначте, чи почули себе. Discord у тестах не бере участі. Журнал останнього підключення до голосу потрапляє у звіт автоматично.</value>
+  </data>
+  <data name="MicTestMediaButton.Content" xml:space="preserve">
+    <value>Тест: звичайний звук</value>
+  </data>
+  <data name="MicTestCallButton.Content" xml:space="preserve">
+    <value>Тест: режим дзвінка</value>
+  </data>
+  <data name="VoiceRefreshReport.Content" xml:space="preserve">
+    <value>Оновити звіт</value>
+  </data>
+  <data name="VoiceCopyReport.Content" xml:space="preserve">
+    <value>Копіювати звіт</value>
+  </data>
+  <data name="VoiceDiag_Recording" xml:space="preserve">
+    <value>Запис 4 секунди — говоріть… потім пролунає запис.</value>
+  </data>
+  <data name="VoiceDiag_Done" xml:space="preserve">
+    <value>Тест завершено. Чи почули ви себе? Напишіть це разом зі звітом.</value>
+  </data>
+  <data name="VoiceDiag_Copied" xml:space="preserve">
+    <value>Звіт скопійовано до буфера обміну.</value>
+  </data>
+  <data name="FriendsLiveTile.Title" xml:space="preserve">
+    <value>Друзі на живій плитці</value>
+  </data>
+  <data name="FriendsLiveTile.Description" xml:space="preserve">
+    <value>Аватарки друзів прокручуються на плитці робочого столу, як у «Контактах». Спершу ті, хто в мережі.</value>
+  </data>
+  <data name="AboutTitle.Text" xml:space="preserve">
+    <value>про версію</value>
+  </data>
+  <data name="About_Description" xml:space="preserve">
+    <value>Вільний клієнт Discord для Windows 10 Mobile: голос із шифруванням DAVE, перегляд трансляцій, оформлення Metro.</value>
+  </data>
+  <data name="About_Developer" xml:space="preserve">
+    <value>розробник: {0}</value>
+  </data>
+  <data name="About_WhatsNew" xml:space="preserve">
+    <value>що нового</value>
+  </data>
+  <data name="About_Thanks" xml:space="preserve">
+    <value>подяки</value>
+  </data>
+  <data name="About_License" xml:space="preserve">
+    <value>ліцензія {0}</value>
+  </data>
+  <data name="Credit_Unicord" xml:space="preserve">
+    <value>клієнт, на якому базується Lyracord · © 2020 Thomas May (WamWooWam), UnicordDev</value>
+  </data>
+  <data name="Credit_Libdave" xml:space="preserve">
+    <value>наскрізне шифрування голосу DAVE · © 2024 Discord</value>
+  </data>
+  <data name="Credit_Mlspp" xml:space="preserve">
+    <value>протокол MLS для libdave · © 2018 Cisco Systems</value>
+  </data>
+  <data name="Credit_OpenSSL" xml:space="preserve">
+    <value>криптографія для libdave · © 1998-2025 The OpenSSL Project Authors</value>
+  </data>
+  <data name="Credit_WebRTC" xml:space="preserve">
+    <value>звуковий рушій (webrtc-uwp) · © 2011 The WebRTC project authors</value>
+  </data>
+  <data name="Credit_DSharpPlus" xml:space="preserve">
+    <value>бібліотека Discord API · © 2015 Mike Santiago, © 2016-2023 DSharpPlus Contributors</value>
+  </data>
+  <data name="Credit_OpusSodium" xml:space="preserve">
+    <value>кодек звуку та шифрування</value>
+  </data>
+  <data name="Credit_Toolkit" xml:space="preserve">
+    <value>елементи інтерфейсу · © .NET Foundation</value>
+  </data>
+  <data name="Credit_Newtonsoft" xml:space="preserve">
+    <value>читання даних Discord · © 2007 James Newton-King</value>
+  </data>
+  <data name="Profile_CallButton" xml:space="preserve">
+    <value>подзвонити</value>
+  </data>
+  <data name="Voice_WaitingForPeer" xml:space="preserve">
+    <value>очікування співрозмовника…</value>
+  </data>
+  <data name="Chat_SystemEvent" xml:space="preserve">
+    <value>{0} · подія Discord (#{1})</value>
+  </data>
+  <data name="Hub_UpdateAvailable" xml:space="preserve">
+    <value>доступне оновлення → {0}</value>
+  </data>
+  <data name="About_UpdatesHeader" xml:space="preserve">
+    <value>оновлення (github)</value>
+  </data>
+  <data name="Update_DownloadButton" xml:space="preserve">
+    <value>завантажити .appx</value>
+  </data>
+  <data name="Update_DownloadVersion" xml:space="preserve">
+    <value>оновити до {0} (.appx)</value>
+  </data>
+  <data name="Update_CheckButton" xml:space="preserve">
+    <value>перевірити</value>
+  </data>
+  <data name="Update_StatusChecking" xml:space="preserve">
+    <value>Перевірка оновлень на GitHub…</value>
+  </data>
+  <data name="Update_StatusAvailable" xml:space="preserve">
+    <value>Доступна нова версія на GitHub: {0}</value>
+  </data>
+  <data name="Update_StatusUpToDate" xml:space="preserve">
+    <value>Встановлено актуальну версію ({0})</value>
+  </data>
+  <data name="Update_InstalledVersion" xml:space="preserve">
+    <value>Встановлено версію {0} ({1})</value>
+  </data>
+  <data name="Update_StatusNoReleases" xml:space="preserve">
+    <value>{0} · синхронізація з GitHub Releases готова</value>
+  </data>
+  <data name="Update_StatusError" xml:space="preserve">
+    <value>Не вдалося перевірити GitHub: {0}</value>
+  </data>
+  <data name="Update_DownloadingStart" xml:space="preserve">
+    <value>Початок завантаження пакета…</value>
+  </data>
+  <data name="Update_DownloadingProgress" xml:space="preserve">
+    <value>Завантаження: {0}% ({1} із {2} МБ)</value>
+  </data>
+  <data name="Update_DownloadedSaved" xml:space="preserve">
+    <value>Збережено в «Завантаження»: {0}</value>
+  </data>
+  <data name="Settings_GitHubRepo" xml:space="preserve">
+    <value>оновлення з GitHub</value>
+  </data>
+  <data name="Settings_GitHubRepoDesc" xml:space="preserve">
+    <value>синхронізація версій та завантаження .appx із GitHub Releases</value>
+  </data>
+  <data name="Settings_GitHubRepoHelp" xml:space="preserve">
+    <value>Репозиторій GitHub (owner/repo) для перевірки нових релізів, синхронізації списку змін і завантаження пакетів .appx. Порожньо — lambdawesta/Lyracord.</value>
+  </data>
+  <data name="Common_Search" xml:space="preserve">
+    <value>пошук</value>
+  </data>
+  <data name="Common_NothingFound" xml:space="preserve">
+    <value>нічого не знайдено</value>
+  </data>
+  <data name="Friends_SearchPlaceholder" xml:space="preserve">
+    <value>пошук друзів за іменем або логіном…</value>
+  </data>
+  <data name="Friends_IncomingRequest" xml:space="preserve">
+    <value>вхідний запит у друзі</value>
+  </data>
+  <data name="Friends_OutgoingRequest" xml:space="preserve">
+    <value>вихідний запит у друзі</value>
+  </data>
+  <data name="Servers_SearchPlaceholder" xml:space="preserve">
+    <value>пошук серверів, чатів, друзів…</value>
+  </data>
+  <data name="Social_AddFriendTitle" xml:space="preserve">
+    <value>додати в друзі</value>
+  </data>
+  <data name="Social_AddFriendPlaceholder" xml:space="preserve">
+    <value>ім'я користувача (наприклад, username)</value>
+  </data>
+  <data name="Social_AddFriendHint" xml:space="preserve">
+    <value>Введіть логін Discord (або старий формат ім'я#0000).</value>
+  </data>
+  <data name="Social_AddFriendEmpty" xml:space="preserve">
+    <value>Введіть ім'я користувача.</value>
+  </data>
+  <data name="Social_SendRequest" xml:space="preserve">
+    <value>надіслати запит</value>
+  </data>
+  <data name="Social_Sending" xml:space="preserve">
+    <value>Надсилання запиту…</value>
+  </data>
+  <data name="Social_JoinServerTitle" xml:space="preserve">
+    <value>увійти на сервер</value>
+  </data>
+  <data name="Social_JoinServerPlaceholder" xml:space="preserve">
+    <value>discord.gg/код або код запрошення</value>
+  </data>
+  <data name="Social_JoinServerHint" xml:space="preserve">
+    <value>Вставте посилання-запрошення Discord або короткий код.</value>
+  </data>
+  <data name="Social_JoinServerEmpty" xml:space="preserve">
+    <value>Введіть посилання або код запрошення.</value>
+  </data>
+  <data name="Social_JoinButton" xml:space="preserve">
+    <value>приєднатися</value>
+  </data>
+  <data name="Social_Joining" xml:space="preserve">
+    <value>Приєднання до сервера…</value>
+  </data>
+  <data name="Social_OpenInBrowser" xml:space="preserve">
+    <value>відкрити у браузері</value>
+  </data>
+  <data name="Social_CaptchaRequired" xml:space="preserve">
+    <value>Discord запросив перевірку (капчу). Відкрийте посилання у браузері, щоб завершити дію.</value>
+  </data>
+  <data name="Social_InviteNotFound" xml:space="preserve">
+    <value>Запрошення не знайдено або воно застаріло.</value>
+  </data>
+  <data name="Social_UserNotFound" xml:space="preserve">
+    <value>Користувача не знайдено. Перевірте написання імені.</value>
+  </data>
+  <data name="Profile_FriendAdd" xml:space="preserve">
+    <value>додати</value>
+  </data>
+  <data name="Profile_FriendInList" xml:space="preserve">
+    <value>у друзях</value>
+  </data>
+  <data name="Profile_FriendAccept" xml:space="preserve">
+    <value>прийняти</value>
+  </data>
+  <data name="Profile_FriendPending" xml:space="preserve">
+    <value>запит надіслано</value>
+  </data>
+  <data name="Profile_FriendUnblock" xml:space="preserve">
+    <value>розблокувати</value>
+  </data>
+  <data name="Profile_RemoveFriendTitle" xml:space="preserve">
+    <value>видалити з друзів?</value>
+  </data>
+  <data name="Profile_RemoveFriendBody" xml:space="preserve">
+    <value>Видалити {0} зі списку друзів?</value>
+  </data>
+  <data name="Profile_RemoveFriendConfirm" xml:space="preserve">
+    <value>видалити</value>
+  </data>
+  <data name="About_Changes" xml:space="preserve">
+    <value># 1.18.16
+пошук по серверах, особистих чатах і друзях у розділах «почати» та «друзі» (миттєва фільтрація в стилі Metro)
+додавання в друзі за іменем користувача, вхід на сервер за посиланням-запрошенням (discord.gg/...), прийняття/відхилення заявок прямо у списку «запити» та кнопка дружби в картці профілю
+виправлено вильоти в серверних та особистих текстових чатах (ArgumentException на порожньому URL іконки/тегу)
+# 1.18.15
+виправлено виліт (ArgumentException) при відкритті особистих чатів із порожнім URL іконки/аватара в compiled x:Bind
+виправлено завантаження стікерів і картинок у Metro-чатах (прибрано конфлікт x:Load + x:Phase, полагоджено StickerControl і GIF-стікери, захист від нульових розмірів в ImageElement)
+додано коректну обробку нових типів повідомлень Discord (наприклад, тип 67) замість «Unknown system message type 67!»
+# 1.18.14
+виправлено відображення учасників в особистих дзвінках: плитка співрозмовника з'являється при його вході й зникає при виході (підписка Gateway OP 13 CALL_CONNECT, звуки входу/виходу та статус «очікування співрозмовника…» / кількість учасників у шапці)
+виправлено дублювання аватарки першого відкритого діалогу при переході в інші чати
+# 1.18.13
+оновлення та синхронізація версій із GitHub прямо в застосунку: сповіщення про нову версію на плитці стартового хаба, синхронізація списку змін із GitHub Releases та завантаження пакета .appx під архітектуру пристрою на сторінці «про версію»
+# 1.18.12
+голосові дзвінки в особистих повідомленнях і групах: кнопка «подзвонити» в шапці особистого чату та в Metro-картці профілю, надсилання виклику (ring), голос із DAVE-шифруванням і плитка активного дзвінка на стартовому хабі
+# 1.18.11
+єдиний Metro-стиль бульбашок повідомлень для серверних текстових каналів та особистих чатів (квадратний аватар, колір ролі, серверний тег і перехід у профіль по натисканню)
+# 1.18.10
+плитка «підтримати» на стартовому хабі тепер відкриває спільноту Lyracord у Telegram (t.me/lyracord)
+виправлено вихід із програми по кнопці «Назад» із картки профілю на стартовому хабі
+# 1.18.9
+новий строгий геометричний Metro-логотип «L» на всіх плитках, заставках і в Rich Presence (вшито Application ID Lyracord)
+картка профілю перероблена в чистий стиль Windows Phone Metro (чорний AMOLED, квадратний аватар зі смужкою статусу, Segoe UI Light, квадратні іконки серверів)
+усі 7 розділів налаштувань у єдиному стилі Metro (без старої WinUI-панелі) + розблоковано й виправлено налаштування сповіщень
+# 1.18.8
+Rich Presence: статус «Lyracord · Windows 10 Mobile» у Discord (перемикач у Metro-налаштуваннях)
+сторінка сервера: додано вкладку «учасники» поруч із каналами та голосом (ролі, у мережі/не в мережі, серверні теги, профіль по натисканню)
+# 1.18.7
+прокрутка у картці профілю на телефоні, кнопка закриття та відступ від панелі Windows
+у профілі: поточна активність (ігри, Spotify, стріми), «Нещодавно грав(ла)» (content-inventory), ігрові віджети профілю та вкладка «Зв'язки»
+# 1.18.6
+серверні теги (primary_guild) у квадратному стилі Metro: іконка та тег поруч з іменем у чаті, профілі, на стартовому хабі, у друзях, особистих і голосі
+# 1.18.5
+кнопки входу та вікно токена піднято вище наекранної панелі Windows
+додано вибір мови перед входом і в Metro-налаштуваннях (English, Русский, Українська, системна)
+# 1.18.4
+перепідключення голосового модуля на ПК при зміні сервера або обриві
+оновлено документацію й прибрано невикористані файли
+# 1.18.3
+виправлено вимкнення звуку (deafen): звук чисто глушиться й миттєво повертається назад
+кнопки мікрофона та звуку додано прямо в панель перегляду трансляції
+ліміт кешу зображень (50 МБ) і пункт очищення кешу в налаштуваннях
+обмеження й фоновий запис журналів, полегшений звіт
+# 1.18.2
+кнопка перемикання звуку під час дзвінка (динамік, розмовний, гарнітура, Bluetooth) і реакція на зміну гарнітури
+лічильник перепідключень голосу скидається після стабільного зв'язку
+міграція налаштувань більше не перезаписує локальні налаштування під час кожного запуску
+закриття трансляції без підвисань, повідомлення про непідтримуваний відеокодек, захист від помилок в особистих дзвінках
+# 1.18.1
+виправлено виліт і зависання при завершенні голосового дзвінка
+голосовий дзвінок продовжує працювати при блокуванні екрана
+# 1.18.0
+англійський та український інтерфейс
+# 1.17.4
+видавець під час встановлення: lambdawesta
+# 1.17.3
+кнопки вікна входу більше не ховаються під системну панель
+після неправильного токена — знову екран входу, а не порожня сторінка друзів
+# 1.17.2
+неправильний або застарілий токен: зрозуміле повідомлення й повернення до входу замість нескінченного підключення
+капча на телефоні: пояснення замість падіння застосунку
+# 1.17.1
+токен більше не зберігається відкритим текстом у налаштуваннях застосунку
+# 1.17.0
+власна назва пакета й сертифікат (встановлюється як новий застосунок)
+покрокова інструкція щодо токена замість посилання-заглушки
+# 1.16.2
+застосунок представляється поточною збіркою Discord: нові значки профілю
+номер збірки можна змінити: налаштування → збірка клієнта
+# 1.16.0
+анімації Windows Phone: сторінки влітають «турнікетом», плитки й списки — «пером»
+# 1.15.x
+швидкий запуск: швидкий розбір каналів, ролей і прав, без зайвих запитів перед підключенням
+аватарки зберігаються на телефоні, трансляція в горизонталі на весь екран</value>
+  </data>
+</root>

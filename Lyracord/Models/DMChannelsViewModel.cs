@@ -1,0 +1,92 @@
+﻿using System.Collections.ObjectModel;
+using System.Linq;
+using System.Threading.Tasks;
+using CommunityToolkit.Mvvm.Messaging;
+using DSharpPlus.Entities;
+using DSharpPlus.EventArgs;
+using Unicord.Universal.Extensions;
+using Unicord.Universal.Models.Channels;
+
+namespace Unicord.Universal.Models
+{
+    public class DMChannelsViewModel : ViewModelBase
+    {
+        private int _selectedItem = -1;
+
+        public DMChannelsViewModel() : base(null)
+        {
+            DMChannels = new ObservableCollection<DmChannelListViewModel>(
+                discord.PrivateChannels
+                .OrderByDescending(r => r.Value.LastMessageId ?? 0)
+                .Select(s => new DmChannelListViewModel(s.Value)));
+
+            WeakReferenceMessenger.Default.Register<DMChannelsViewModel, DmChannelCreateEventArgs>(this, (r, e) => r.OnDmCreated(e.Event));
+            WeakReferenceMessenger.Default.Register<DMChannelsViewModel, DmChannelDeleteEventArgs>(this, (r, e) => r.OnDmDeleted(e.Event));
+            WeakReferenceMessenger.Default.Register<DMChannelsViewModel, MessageCreateEventArgs>(this, (r, e) => r.OnMessageCreated(e.Event));
+            WeakReferenceMessenger.Default.Register<DMChannelsViewModel, ReadyEventArgs>(this, (r, e) => r.OnReady(e.Event));
+        }
+
+        public ObservableCollection<DmChannelListViewModel> DMChannels { get; set; }
+
+        public int SelectedIndex { get => _selectedItem; set => OnPropertySet(ref _selectedItem, value); }
+        public bool UpdatingIndex { get; set; }
+
+        private Task OnReady(ReadyEventArgs e)
+        {
+            PostAfterDrawing("после входа: старый список личных", () =>
+            {
+                DMChannels.Clear();
+                foreach (var vm in discord.PrivateChannels
+                    .OrderByDescending(r => r.Value.LastMessageId ?? 0)
+                    .Select(s => new DmChannelListViewModel(s.Value)))
+                {
+                    DMChannels.Add(vm);
+                }
+            });
+
+            return Task.CompletedTask;
+        }
+
+        private Task OnDmCreated(DmChannelCreateEventArgs e)
+        {
+            syncContext.Post(o => DMChannels.Insert(0, new DmChannelListViewModel(o as DiscordDmChannel)), e.Channel);
+            return Task.CompletedTask;
+        }
+
+        private Task OnDmDeleted(DmChannelDeleteEventArgs e)
+        {
+            syncContext.Post(o => DMChannels.Remove(DMChannels.FirstOrDefault(s => s.Channel == o as DiscordDmChannel)), e.Channel);
+            return Task.CompletedTask;
+        }
+
+        private Task OnMessageCreated(MessageCreateEventArgs e)
+        {
+            if (e.Channel is DiscordDmChannel dm)
+            {
+                var current = DMChannels.ElementAtOrDefault(SelectedIndex);
+                var index = DMChannels.FindIndex(s => s.Channel == dm);
+                if (index == 0)
+                    return Task.CompletedTask;
+
+                syncContext.Post(o =>
+                {
+                    // BUGBUG: this is very bad
+                    UpdatingIndex = true;
+                    if (index > 0)
+                    {
+                        DMChannels.Move(index, 0);
+                    }
+                    else if (index < 0)
+                    {
+                        DMChannels.Insert(0, new DmChannelListViewModel(dm));
+                    }
+
+                    SelectedIndex = current == null ? -1 : DMChannels.IndexOf(current);
+                    UpdatingIndex = false;
+                }, null);
+            }
+
+            return Task.CompletedTask;
+        }
+    }
+}

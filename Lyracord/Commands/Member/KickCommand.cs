@@ -1,0 +1,43 @@
+﻿using System;
+using DSharpPlus;
+using Unicord.Universal.Dialogs;
+using Unicord.Universal.Services;
+using Unicord.Universal.Models.User;
+using Windows.UI.Xaml.Controls;
+
+namespace Unicord.Universal.Commands.Members
+{
+    public class KickCommand : DiscordCommand<UserViewModel>
+    {
+        public KickCommand(UserViewModel viewModel) : base(viewModel)
+        {
+        }
+
+        public override bool CanExecute(object parameter)
+        {
+            var member = viewModel.Member;
+            if (member == null)
+                return false;
+
+            if (member.Id == DiscordManager.Discord.CurrentUser.Id)
+                return false;
+
+            if (!Tools.CheckRoleHierarchy(member.Guild.CurrentMember, member))
+                return false;
+
+            return member.Guild.CurrentMember.PermissionsIn(null).HasPermission(Permissions.KickMembers);
+        }
+
+        public override async void Execute(object parameter)
+        {
+
+            var kickDialog = new KickDialog(viewModel.Member);
+            var result = await kickDialog.ShowAsync();
+
+            if (result == ContentDialogResult.Primary)
+            {
+                await viewModel.Member.RemoveAsync(kickDialog.KickReason);
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+﻿<Page
+    x:Class="Unicord.Universal.Pages.Settings.VoiceSettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Unicord.Universal.Pages.Settings"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:settings="using:SettingsControl"
+    mc:Ignorable="d" Loaded="Page_Loaded"
+    d:DesignWidth="450">
+    <Page.Resources>
+        <DataTemplate x:Key="DeviceTemplate">
+            <TextBlock Text="{Binding Name, FallbackValue=Default, TargetNullValue=Default}"/>
+        </DataTemplate>
+    </Page.Resources>
+
+    <StackPanel>
+        <TextBlock x:Uid="/VoiceSettingsPage/AudioDevicesHeader" Style="{ThemeResource BaseTextBlockStyle}" Text="Audio Devices" Margin="4,0,0,16"/>
+
+        <settings:SettingsBlockControl x:Uid="/VoiceSettingsPage/InputDeviceBlock">
+            <settings:SettingsBlockControl.Icon>
+                <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE720;"/>
+            </settings:SettingsBlockControl.Icon>
+            <ComboBox ItemTemplate="{StaticResource DeviceTemplate}" 
+                      ItemsSource="{Binding AvailableInputDevices}"
+                      SelectedItem="{Binding InputDevice, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                      HorizontalAlignment="Stretch"
+                      MinWidth="200"/>
+        </settings:SettingsBlockControl>
+
+        <settings:SettingsBlockControl x:Uid="/VoiceSettingsPage/OutputDeviceBlock">
+            <settings:SettingsBlockControl.Icon>
+                <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE7F5;"/>
+            </settings:SettingsBlockControl.Icon>
+            <ComboBox ItemTemplate="{StaticResource DeviceTemplate}" 
+                      ItemsSource="{Binding AvailableOutputDevices}" 
+                      SelectedItem="{Binding OutputDevice, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                      HorizontalAlignment="Stretch"
+                      MinWidth="200"/>
+        </settings:SettingsBlockControl>
+
+        <TextBlock x:Uid="/VoiceSettingsPage/AudioProcessingHeader" Text="Audio Processing" Style="{ThemeResource BaseTextBlockStyle}" Margin="4,16" />
+
+        <settings:SettingsBlockControl x:Uid="/VoiceSettingsPage/NoiseSuppressionBlock">
+            <settings:SettingsBlockControl.Icon>
+                <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xF61F;"/>
+            </settings:SettingsBlockControl.Icon>
+            <ComboBox x:Name="NoiseSuppression"
+                      SelectedIndex="{Binding SuppressionLevel, Mode=TwoWay}"
+                      HorizontalAlignment="Stretch"
+                      MinWidth="200">
+                <ComboBoxItem x:Uid="/VoiceSettingsPage/NoiseSuppressionDisabled" Content="Disabled"/>
+                <ComboBoxItem x:Uid="/VoiceSettingsPage/NoiseSuppressionLow" Content="Low"/>
+                <ComboBoxItem x:Uid="/VoiceSettingsPage/NoiseSuppressionMedium" Content="Medium"/>
+                <ComboBoxItem x:Uid="/VoiceSettingsPage/NoiseSuppressionHigh" Content="High"/>
+            </ComboBox>
+        </settings:SettingsBlockControl>
+
+        <settings:SettingsBlockControl x:Uid="/VoiceSettingsPage/VoiceActivityBlock">
+            <settings:SettingsBlockControl.Icon>
+                <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xF12E;"/>
+            </settings:SettingsBlockControl.Icon>
+            <ToggleSwitch Grid.Column="1" Style="{ThemeResource NoTextToggleSwitchStyle}" IsOn="{Binding VoiceActivity, Mode=TwoWay}" />
+        </settings:SettingsBlockControl>
+
+        <settings:SettingsBlockControl x:Uid="/VoiceSettingsPage/AutomaticGainControlBlock">
+            <settings:SettingsBlockControl.Icon>
+                <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE767;"/>
+            </settings:SettingsBlockControl.Icon>
+            <ToggleSwitch Grid.Column="1" Style="{ThemeResource NoTextToggleSwitchStyle}" IsOn="{Binding AutomaticGainControl, Mode=TwoWay}" />
+        </settings:SettingsBlockControl>
+
+        <settings:SettingsBlockControl x:Uid="/VoiceSettingsPage/EchoCancellationBlock">
+            <settings:SettingsBlockControl.Icon>
+                <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xEC72;"/>
+            </settings:SettingsBlockControl.Icon>
+            <ToggleSwitch Grid.Column="1" Style="{ThemeResource NoTextToggleSwitchStyle}" IsOn="{Binding EchoCancellation, Mode=TwoWay}" />
+        </settings:SettingsBlockControl>
+
+        <settings:SettingsBlockControl x:Uid="/Metro/VoiceCallMode" Title="Режим звонка (телефон)"
+                                       Description="Только Windows 10 Mobile: голос идёт как телефонный звонок, через громкую связь. Выключите, если в этом режиме нет звука. Действует со следующего подключения.">
+            <settings:SettingsBlockControl.Icon>
+                <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE717;"/>
+            </settings:SettingsBlockControl.Icon>
+            <ToggleSwitch Grid.Column="1" Style="{ThemeResource NoTextToggleSwitchStyle}" IsOn="{Binding PhoneCallMode, Mode=TwoWay}" />
+        </settings:SettingsBlockControl>
+
+        <!-- Voice troubleshooting (Windows 10 Mobile). -->
+        <TextBlock x:Uid="/Metro/VoiceDiagTitle" Text="Диагностика голоса" Style="{ThemeResource BaseTextBlockStyle}" Margin="4,24,0,8"/>
+        <TextBlock TextWrapping="Wrap" Opacity="0.75" Margin="4,0,4,12"
+                   x:Uid="/Metro/VoiceDiagText" Text="Тесты пишут 4 секунды с микрофона и сразу воспроизводят запись — говорите во время записи и отметьте, услышали ли себя. Discord в тестах не участвует. Журнал последнего подключения к голосу попадает в отчёт автоматически."/>
+        <StackPanel Margin="4,0,4,0">
+            <Button x:Name="MicTestMediaButton" x:Uid="/Metro/MicTestMediaButton" Content="Тест: обычный звук" Click="MicTestMedia_Click" HorizontalAlignment="Stretch" Margin="0,0,0,8"/>
+            <Button x:Name="MicTestCallButton" x:Uid="/Metro/MicTestCallButton" Content="Тест: режим звонка" Click="MicTestCall_Click" HorizontalAlignment="Stretch" Margin="0,0,0,8"/>
+            <Button x:Uid="/Metro/VoiceRefreshReport" Content="Обновить отчёт" Click="RefreshReport_Click" HorizontalAlignment="Stretch" Margin="0,0,0,8"/>
+            <Button x:Uid="/Metro/VoiceCopyReport" Content="Копировать отчёт" Click="CopyReport_Click" HorizontalAlignment="Stretch" Margin="0,0,0,8"/>
+            <TextBlock x:Name="DiagStatus" TextWrapping="Wrap" Margin="0,0,0,8"/>
+            <TextBox x:Name="DiagReport" IsReadOnly="True" TextWrapping="Wrap" AcceptsReturn="True"
+                     FontFamily="Consolas" FontSize="11" MinHeight="200" Margin="0,0,0,24"/>
+        </StackPanel>
+
+    </StackPanel>
+</Page>

@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="Unicord.Universal.Pages.LoginPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Unicord.Universal.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:lib="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    Loaded="Page_Loaded">
+    <Grid>
+        <StackPanel MaxWidth="400" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,24,20,96">
+            <Image Source="{ThemeResource DiscordWordMark}" Margin="0,0,0,20" />
+
+            <TextBlock x:Name="LanguageLabel"
+                       HorizontalAlignment="Center"
+                       FontSize="13"
+                       Opacity="0.7"
+                       Margin="0,0,0,8"/>
+
+            <Grid x:Name="LanguageGrid" Margin="0,0,0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="LangEnButton" Grid.Column="0" Content="English" Tag="en-US" Click="LanguageButton_Click"
+                        HorizontalAlignment="Stretch" Margin="0,0,4,0" Padding="8,8"/>
+                <Button x:Name="LangRuButton" Grid.Column="1" Content="Русский" Tag="ru-RU" Click="LanguageButton_Click"
+                        HorizontalAlignment="Stretch" Margin="2,0" Padding="8,8"/>
+                <Button x:Name="LangUkButton" Grid.Column="2" Content="Українська" Tag="uk-UA" Click="LanguageButton_Click"
+                        HorizontalAlignment="Stretch" Margin="4,0,0,0" Padding="8,8"/>
+            </Grid>
+
+            <Button x:Name="TokenLoginButton"
+                    x:Uid="/LoginPage/LoginWithTokenButton"
+                    Content="Login with Token"
+                    Click="TokenLoginButton_Click"
+                    BorderThickness="0"
+                    HorizontalAlignment="Stretch"
+                    Padding="12,10"
+                    Style="{ThemeResource AccentButtonStyle}">
+            </Button>
+        </StackPanel>
+     </Grid>
+</Page>

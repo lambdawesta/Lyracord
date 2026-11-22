@@ -1,0 +1,37 @@
+<Page
+    x:Class="Unicord.Universal.Pages.SettingsHubPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <!-- Settings list in the style of Windows Phone settings: big lowercase items with a short line below.
+         Square corners only; never Grid/Control.CornerRadius (1809+, phones run 1709). -->
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Dark">
+                    <SolidColorBrush x:Key="HubBackground" Color="#FF000000"/>
+                    <SolidColorBrush x:Key="HubForeground" Color="#FFFFFFFF"/>
+                    <SolidColorBrush x:Key="HubSecondary" Color="#FF9A9A9A"/>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Light">
+                    <SolidColorBrush x:Key="HubBackground" Color="#FFFFFFFF"/>
+                    <SolidColorBrush x:Key="HubForeground" Color="#FF000000"/>
+                    <SolidColorBrush x:Key="HubSecondary" Color="#FF6B6B6B"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource HubBackground}">
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel Padding="24,20,24,24" MaxWidth="720" HorizontalAlignment="Stretch">
+                <TextBlock x:Uid="/Metro/SettingsTitle" Text="настройки" FontFamily="Segoe UI" FontWeight="Light" FontSize="56"
+                           Foreground="{ThemeResource HubForeground}" Margin="-3,0,0,12"/>
+                <StackPanel x:Name="Items"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

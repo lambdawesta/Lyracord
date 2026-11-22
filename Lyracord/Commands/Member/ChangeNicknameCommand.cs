@@ -1,0 +1,51 @@
+﻿using System;
+using DSharpPlus;
+using Unicord.Universal.Dialogs;
+using Unicord.Universal.Models.User;
+using Unicord.Universal.Services;
+using Windows.UI.Xaml.Controls;
+
+namespace Unicord.Universal.Commands.Members
+{
+    class ChangeNicknameCommand : DiscordCommand<UserViewModel>
+    {
+        public ChangeNicknameCommand(UserViewModel viewModel) : base(viewModel)
+        {
+        }
+
+        public override bool CanExecute(object parameter)
+        {
+            if (viewModel.Member == null) return false;
+
+            var member = viewModel.Member;
+            var permissions = member.Guild.CurrentMember.PermissionsIn(null);
+            if (member.Id == DiscordManager.Discord.CurrentUser.Id &&
+                (permissions.HasFlag(Permissions.ChangeNickname) || permissions.HasFlag(Permissions.ManageNicknames)))
+            {
+                return true;
+            }
+
+            if (permissions.HasFlag(Permissions.ManageNicknames)
+                && Tools.CheckRoleHierarchy(member.Guild.CurrentMember, member))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public override async void Execute(object parameter)
+        {
+            if (viewModel.Member == null) 
+                return;
+
+            var member = viewModel.Member;
+
+            var dialog = new ChangeNicknameDialog(member);
+            if (await dialog.ShowAsync() == ContentDialogResult.Primary)
+            {
+                await member.ModifyAsync(m => m.Nickname = dialog.Text);
+            }
+        }
+    }
+}

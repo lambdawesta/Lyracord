@@ -1,0 +1,66 @@
+<Page
+    x:Class="Unicord.Universal.Pages.GuildHubPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <!-- One server in the Windows Phone hub style: its name, then "channels · voice" pivot pages.
+         Square corners only (Grid/Control.CornerRadius need 1809). -->
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Dark">
+                    <SolidColorBrush x:Key="HubBackground" Color="#FF000000"/>
+                    <SolidColorBrush x:Key="HubForeground" Color="#FFFFFFFF"/>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Light">
+                    <SolidColorBrush x:Key="HubBackground" Color="#FFFFFFFF"/>
+                    <SolidColorBrush x:Key="HubForeground" Color="#FF000000"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource HubBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Margin="24,16,24,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Border x:Name="IconHost" Width="48" Height="48" Margin="0,4,14,0" VerticalAlignment="Center"/>
+            <TextBlock x:Name="TitleText" Grid.Column="1" FontFamily="Segoe UI" FontWeight="Light" FontSize="40"
+                       Foreground="{ThemeResource HubForeground}" TextTrimming="CharacterEllipsis" VerticalAlignment="Center"/>
+        </Grid>
+
+        <Pivot x:Name="GuildPivot" Grid.Row="1" Margin="12,0,12,0">
+            <Pivot.HeaderTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" FontFamily="Segoe UI" FontWeight="Light" FontSize="30"/>
+                </DataTemplate>
+            </Pivot.HeaderTemplate>
+
+            <PivotItem x:Uid="/Metro/GuildTabChannels" Header="каналы" Margin="12,8,12,0">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel x:Name="ChannelsList" Margin="0,0,0,24"/>
+                </ScrollViewer>
+            </PivotItem>
+            <PivotItem x:Uid="/Metro/GuildTabVoice" Header="голос" Margin="12,8,12,0">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel x:Name="VoiceList" Margin="0,0,0,24"/>
+                </ScrollViewer>
+            </PivotItem>
+            <PivotItem x:Uid="/Metro/GuildTabMembers" Header="участники" Margin="12,8,12,0">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel x:Name="MembersList" Margin="0,0,0,24"/>
+                </ScrollViewer>
+            </PivotItem>
+        </Pivot>
+    </Grid>
+</Page>

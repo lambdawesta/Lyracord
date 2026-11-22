@@ -1,0 +1,87 @@
+<Page
+    x:Class="Unicord.Universal.Pages.ProfileEditPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d">
+
+    <!-- Profile editor in the hub's Metro style: bio, pronouns, banner colour and (with Nitro) a banner picture.
+         Square corners only; never Grid/Control.CornerRadius (1809+, phones run 1709). -->
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Dark">
+                    <SolidColorBrush x:Key="HubBackground" Color="#FF000000"/>
+                    <SolidColorBrush x:Key="HubForeground" Color="#FFFFFFFF"/>
+                    <SolidColorBrush x:Key="HubSecondary" Color="#FF9A9A9A"/>
+                    <SolidColorBrush x:Key="HubPhotoBackground" Color="#FF262626"/>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Light">
+                    <SolidColorBrush x:Key="HubBackground" Color="#FFFFFFFF"/>
+                    <SolidColorBrush x:Key="HubForeground" Color="#FF000000"/>
+                    <SolidColorBrush x:Key="HubSecondary" Color="#FF6B6B6B"/>
+                    <SolidColorBrush x:Key="HubPhotoBackground" Color="#FFE0E0E0"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+
+            <Style x:Key="SectionStyle" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="FontWeight" Value="SemiBold"/>
+                <Setter Property="CharacterSpacing" Value="100"/>
+                <Setter Property="Foreground" Value="{ThemeResource HubSecondary}"/>
+                <Setter Property="Margin" Value="0,24,0,8"/>
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource HubBackground}">
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel Padding="24,20,24,24" MaxWidth="720" HorizontalAlignment="Stretch">
+                <TextBlock x:Uid="/Metro/ProfileTitle" Text="профиль" FontFamily="Segoe UI" FontWeight="Light" FontSize="56"
+                           Foreground="{ThemeResource HubForeground}" Margin="-3,0,0,4"/>
+                <TextBlock x:Name="LoadingText" x:Uid="/Metro/ProfileLoading" Text="загрузка…" Foreground="{ThemeResource HubSecondary}"/>
+
+                <StackPanel x:Name="Editor" Visibility="Collapsed">
+                    <!-- banner preview: the picture, or the banner colour behind it -->
+                    <TextBlock x:Uid="/Metro/ProfileBanner" Text="БАННЕР" Style="{StaticResource SectionStyle}"/>
+                    <Grid x:Name="BannerPreview" Height="120" Background="{ThemeResource HubPhotoBackground}">
+                        <Image x:Name="BannerImage" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                    <toolkit:WrapPanel Margin="0,12,0,0" HorizontalSpacing="12" VerticalSpacing="12">
+                        <Button x:Name="PickBannerButton" x:Uid="/Metro/PickBannerButton" Content="выбрать картинку" Click="PickBanner_Click" Padding="14,6" FontSize="16"/>
+                        <Button x:Name="RemoveBannerButton" x:Uid="/Metro/RemoveBannerButton" Content="убрать картинку" Click="RemoveBanner_Click" Padding="14,6" FontSize="16"/>
+                    </toolkit:WrapPanel>
+                    <TextBlock x:Name="NitroNote" Visibility="Collapsed" Margin="0,8,0,0" TextWrapping="Wrap" FontSize="14"
+                               Foreground="{ThemeResource HubSecondary}"
+                               x:Uid="/Metro/NitroNote" Text="Картинку баннера Discord разрешает только с Nitro. Цвет баннера можно поставить и без него."/>
+
+                    <TextBlock x:Uid="/Metro/ProfileBannerColor" Text="ЦВЕТ БАННЕРА" Style="{StaticResource SectionStyle}"/>
+                    <toolkit:WrapPanel x:Name="ColorSwatches" HorizontalSpacing="8" VerticalSpacing="8"/>
+                    <Grid Margin="0,12,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox x:Name="ColorBox" PlaceholderText="#RRGGBB" MaxLength="7" TextChanged="ColorBox_TextChanged"/>
+                        <Button Grid.Column="1" x:Uid="/Metro/ProfileNoColor" Content="без цвета" Margin="12,0,0,0" Click="NoColor_Click" Padding="14,6" FontSize="16"/>
+                    </Grid>
+
+                    <TextBlock x:Uid="/Metro/ProfileAboutMe" Text="ОБО МНЕ" Style="{StaticResource SectionStyle}"/>
+                    <TextBox x:Name="BioBox" AcceptsReturn="True" TextWrapping="Wrap" MaxLength="190" Height="130"
+                             x:Uid="/Metro/BioBox" PlaceholderText="Расскажите о себе" TextChanged="BioBox_TextChanged"/>
+                    <TextBlock x:Name="BioCounter" HorizontalAlignment="Right" FontSize="12" Margin="0,4,0,0"
+                               Foreground="{ThemeResource HubSecondary}" Text="0 / 190"/>
+
+                    <TextBlock x:Uid="/Metro/ProfilePronouns" Text="МЕСТОИМЕНИЯ" Style="{StaticResource SectionStyle}"/>
+                    <TextBox x:Name="PronounsBox" MaxLength="40" x:Uid="/Metro/PronounsBox" PlaceholderText="например, он/его"/>
+
+                    <Button x:Name="SaveButton" x:Uid="/Metro/SaveButton" Content="сохранить" Click="Save_Click" Margin="0,28,0,0" Padding="24,8" FontSize="18"
+                            HorizontalAlignment="Left"/>
+                    <TextBlock x:Name="StatusText" Margin="0,12,0,0" TextWrapping="Wrap" Foreground="{ThemeResource HubSecondary}"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

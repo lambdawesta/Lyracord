@@ -1,0 +1,66 @@
+<Page
+    x:Class="Unicord.Universal.Pages.MetroSettingsSectionPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <!-- Unified Windows Phone Metro host for every settings section (account, messages, notifications, appearance,
+         media, voice, security). Replaces the legacy WinUI NavigationView chrome when the Metro theme is active.
+         Square corners only; never Grid/Control.CornerRadius (1809+, phones run 1709). -->
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Dark">
+                    <SolidColorBrush x:Key="HubBackground" Color="#FF000000"/>
+                    <SolidColorBrush x:Key="HubForeground" Color="#FFFFFFFF"/>
+                    <SolidColorBrush x:Key="HubSecondary" Color="#FF9A9A9A"/>
+                    <SolidColorBrush x:Key="ExpanderHeaderBackground" Color="Transparent"/>
+                    <SolidColorBrush x:Key="ExpanderHeaderBackgroundPointerOver" Color="#FF141414"/>
+                    <SolidColorBrush x:Key="ExpanderHeaderBackgroundPressed" Color="#FF1C1C1C"/>
+                    <SolidColorBrush x:Key="ExpanderHeaderBorderBrush" Color="#FF262626"/>
+                    <SolidColorBrush x:Key="ExpanderContentBackground" Color="Transparent"/>
+                    <SolidColorBrush x:Key="ExpanderContentBorderBrush" Color="#FF262626"/>
+                    <SolidColorBrush x:Key="CardBackgroundFillColorDefaultBrush" Color="#FF0D0D0D"/>
+                    <SolidColorBrush x:Key="CardStrokeColorDefaultBrush" Color="#FF262626"/>
+                    <SolidColorBrush x:Key="LayerFillColorAltBrush" Color="#FF1A1A1A"/>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Light">
+                    <SolidColorBrush x:Key="HubBackground" Color="#FFFFFFFF"/>
+                    <SolidColorBrush x:Key="HubForeground" Color="#FF000000"/>
+                    <SolidColorBrush x:Key="HubSecondary" Color="#FF6B6B6B"/>
+                    <SolidColorBrush x:Key="ExpanderHeaderBackground" Color="Transparent"/>
+                    <SolidColorBrush x:Key="ExpanderHeaderBackgroundPointerOver" Color="#FFF2F2F2"/>
+                    <SolidColorBrush x:Key="ExpanderHeaderBackgroundPressed" Color="#FFE6E6E6"/>
+                    <SolidColorBrush x:Key="ExpanderHeaderBorderBrush" Color="#FFE0E0E0"/>
+                    <SolidColorBrush x:Key="ExpanderContentBackground" Color="Transparent"/>
+                    <SolidColorBrush x:Key="ExpanderContentBorderBrush" Color="#FFE0E0E0"/>
+                    <SolidColorBrush x:Key="CardBackgroundFillColorDefaultBrush" Color="#FFF5F5F5"/>
+                    <SolidColorBrush x:Key="CardStrokeColorDefaultBrush" Color="#FFE0E0E0"/>
+                    <SolidColorBrush x:Key="LayerFillColorAltBrush" Color="#FFE8E8E8"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+
+            <Thickness x:Key="ExpanderHeaderBorderThickness">0,0,0,1</Thickness>
+            <Thickness x:Key="ExpanderContentBorderThickness">0,0,0,1</Thickness>
+            <Thickness x:Key="ExpanderContentPadding">0,10,0,10</Thickness>
+            <CornerRadius x:Key="ControlCornerRadius">0</CornerRadius>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource HubBackground}">
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel Padding="24,20,24,72" MaxWidth="720" HorizontalAlignment="Stretch">
+                <TextBlock x:Name="TitleText"
+                           FontFamily="Segoe UI"
+                           FontWeight="Light"
+                           FontSize="48"
+                           Foreground="{ThemeResource HubForeground}"
+                           TextTrimming="CharacterEllipsis"
+                           Margin="-2,0,0,16"/>
+                <Frame x:Name="SectionFrame"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

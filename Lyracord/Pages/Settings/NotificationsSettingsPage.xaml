@@ -1,0 +1,75 @@
+﻿<Page
+    x:Class="Unicord.Universal.Pages.Settings.NotificationsSettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Unicord.Universal.Pages.Settings"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="using:Unicord.Universal.Models"
+    xmlns:settings="using:SettingsControl" 
+    xmlns:controls="using:Unicord.Universal.Controls"
+    mc:Ignorable="d" x:DefaultBindMode="TwoWay">
+    <Page.DataContext>
+        <models:NotificationsSettingsModel/>
+    </Page.DataContext>
+
+    <StackPanel>
+        <TextBlock x:Name="unavailableText"
+                   x:Uid="/NotificationsSettingsPage/DesktopNotificationsUnavailable"
+                   Margin="0,0,0,16"
+                   Visibility="{Binding IsPageEnabled, Converter={StaticResource InverseBoolVisibilityConverter}}"
+                   Foreground="{StaticResource ErrorTextForegroundBrush}"
+                   TextWrapping="Wrap"/>
+
+        <settings:SettingsBlockControl x:Uid="/NotificationsSettingsPage/EnableNotifications"
+                                       Description="{Binding EnableNotificationsDescription}"
+                                       IsEnabled="{Binding IsPageEnabled}"
+                                       IsExpanded="True">
+            <settings:SettingsBlockControl.Icon>
+                <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="{x:Bind NotificationGlyph, Mode=OneWay}"/>
+            </settings:SettingsBlockControl.Icon>
+            <ToggleSwitch Style="{ThemeResource NoTextToggleSwitchStyle}" IsOn="{Binding EnableNotifications, Mode=TwoWay}" Margin="0,0,-24,0"/>
+            <settings:SettingsBlockControl.ExpandableContent>
+                <StackPanel Margin="-16,-16,-16,-20">
+                    <StackPanel.Resources>
+                        <SolidColorBrush x:Key="ExpanderHeaderBackground" Color="Transparent"/>
+                        <StaticResource x:Key="ExpanderHeaderBorderBrush" ResourceKey="CardStrokeColorDefaultBrush"/>
+                        <Thickness x:Key="ExpanderHeaderBorderThickness">0,0,0,1.5</Thickness>
+                        <CornerRadius x:Key="ControlCornerRadius">0</CornerRadius>
+                    </StackPanel.Resources>
+                    <settings:SettingsBlockControl x:Uid="/NotificationsSettingsPage/EnableDesktopNotifications"
+                                                   Description="{Binding EnableDesktopNotificationsDescription}"
+                                                   IsEnabled="{Binding IsPageAndNotificationsEnabled}">
+                        <ToggleSwitch Style="{ThemeResource NoTextToggleSwitchStyle}" IsOn="{Binding EnableDesktopNotifications, Mode=TwoWay}" />
+                    </settings:SettingsBlockControl>
+
+                    <settings:SettingsBlockControl x:Uid="/NotificationsSettingsPage/EnableLiveTiles"
+                                                   Visibility="{Binding IsLiveTilesVisible, Converter={StaticResource BoolVisibilityConverter}}"
+                                                   IsEnabled="{Binding IsPageAndNotificationsEnabled}">
+                        <ToggleSwitch Style="{ThemeResource NoTextToggleSwitchStyle}" IsOn="{Binding EnableLiveTiles, Mode=TwoWay}" />
+                    </settings:SettingsBlockControl>
+
+                    <settings:SettingsBlockControl x:Uid="/NotificationsSettingsPage/EnableBadgeCount"
+                                                   IsEnabled="{Binding IsPageAndNotificationsEnabled}">
+                        <ToggleSwitch Style="{ThemeResource NoTextToggleSwitchStyle}" IsOn="{Binding EnableBadgeCount, Mode=TwoWay}" />
+                    </settings:SettingsBlockControl>
+
+                    <settings:SettingsBlockControl x:Uid="/NotificationsSettingsPage/EnableBadgeUnread"
+                                                   IsEnabled="{Binding IsPageAndNotificationsEnabled}">
+                        <ToggleSwitch Style="{ThemeResource NoTextToggleSwitchStyle}" IsOn="{Binding EnableBadgeUnread, Mode=TwoWay}" />
+                    </settings:SettingsBlockControl>
+                </StackPanel>
+            </settings:SettingsBlockControl.ExpandableContent>
+        </settings:SettingsBlockControl>
+
+        <settings:SettingsBlockControl x:Uid="/Metro/FriendsLiveTile" Title="Друзья на живой плитке"
+                                       Description="Аватарки друзей катятся по плитке на рабочем столе, как в «Контактах». Сначала те, кто в сети."
+                                       Visibility="{Binding IsLiveTilesVisible, Converter={StaticResource BoolVisibilityConverter}}">
+            <settings:SettingsBlockControl.Icon>
+                <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE716;"/>
+            </settings:SettingsBlockControl.Icon>
+            <ToggleSwitch Style="{ThemeResource NoTextToggleSwitchStyle}" IsOn="{Binding FriendsLiveTile, Mode=TwoWay}" Margin="0,0,-24,0"/>
+        </settings:SettingsBlockControl>
+
+    </StackPanel>
+</Page>

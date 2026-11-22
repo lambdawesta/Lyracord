@@ -1,0 +1,14 @@
+﻿EnumWindows
+FindWindowEx
+IsWindowVisible
+IsIconic
+GetClassName
+GetWindowThreadProcessId
+OpenProcess
+CloseHandle
+GetPackageFullName
+GetCurrentPackageFullName
+DwmGetWindowAttribute
+DwmSetWindowAttribute
+WIN32_ERROR
+MAX_PATH
